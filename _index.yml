@@ -1,0 +1,29 @@
+---
+indexpage:
+  title: 업그레이드 Health Checker 문서
+  summary: Upgrade Health Checker는 포괄적인 상태 점검을 수행하여 성공적인 ONTAP 업그레이드를 계획하고 실행할 수 있도록
+    지원합니다.
+  keywords: upgrade health checker, ontap, upgrade advisor
+  lead: Upgrade Health Checker는 포괄적인 상태 점검을 수행하여 성공적인 ONTAP 업그레이드를 계획하고 실행할 수 있도록
+    지원합니다.
+  tiles:
+  - title: 시작하기
+    links:
+    - title: 업그레이드 상태 점검 도구에 대해 알아보십시오
+      url: learn-about-upgrade-health-checker.html
+    - title: 업그레이드 상태 점검 도구 설정
+      url: set-up-upgrade-health-checker.html
+  - title: 업그레이드 상태 확인 도구 사용
+    links:
+    - title: ONTAP 업그레이드 보고서를 생성합니다
+      url: generate-report-upgrade-health-checker.html
+    - title: 보고서 생성 자동화
+      url: automate-report-upgrade-health-checker.html
+  - title: 추가 자료
+    links:
+    - title: Upgrade Health Checker의 입력 매개변수에 대해 알아보십시오
+      url: upgrade-health-checker-input-parameters.html
+    - title: 업그레이드 상태 점검 도구 FAQ
+      url: faq.html
+    - title: Upgrade Advisor 문서
+      url: https://docs.netapp.com/us-en/active-iq/upgrade_advisor_overview.html

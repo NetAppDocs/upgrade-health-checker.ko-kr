@@ -1,0 +1,35 @@
+---
+settings:
+  name: Upgrade Health Checker
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: ko-kr,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,zh-cn,zh-tw
+sidebar:
+  entries:
+  - title: 업그레이드 Health Checker 문서
+    url: "/index.html"
+  - title: 릴리스 노트
+    entries:
+    - title: 새로운 소식
+      url: "/whats-new.html"
+  - title: 시작하기
+    entries:
+    - title: 업그레이드 상태 점검 도구에 대해 알아보십시오
+      url: "/learn-about-upgrade-health-checker.html"
+    - title: 업그레이드 상태 점검 도구 설정
+      url: "/set-up-upgrade-health-checker.html"
+  - title: 업그레이드 상태 확인 도구 사용
+    entries:
+    - title: ONTAP 업그레이드 보고서를 생성합니다
+      url: "/generate-report-upgrade-health-checker.html"
+    - title: 보고서 생성 자동화
+      url: "/automate-report-upgrade-health-checker.html"
+  - title: 업그레이드 상태 검사기의 입력 매개변수
+    url: "/upgrade-health-checker-input-parameters.html"
+  - title: FAQ
+    url: "/faq-upgrade-health-checker.html"
+  - title: 법적 고지
+    url: "/legal-notices.html"

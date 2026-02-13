@@ -1,0 +1,152 @@
+---
+sidebar: sidebar 
+permalink: set-up-upgrade-health-checker.html 
+keywords: upgrade, health, checker, set up, download 
+summary: Upgrade Health Checker를 다운로드하여 최신 버전의 ONTAP로 업그레이드하기 전에 현장에서 포괄적인 보고서를 생성할 수 있습니다. 
+---
+= Upgrade Health Checker를 다운로드하고 설정합니다
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Upgrade Health Checker를 다운로드하여 최신 버전의 ONTAP로 업그레이드하기 전에 현장에서 포괄적인 보고서를 생성할 수 있습니다.
+
+.시작하기 전에
+다음 사양으로 Upgrade Health Checker용 가상 머신을 설정하십시오.
+
+* 처리 및 메모리: m5.large VM 또는 2개의 vCPU 및 8GiB RAM이 있는 동등한 제품.
+* 권장 운영 체제: 최적의 호환성을 위한 Ubuntu 22.04.
+* Storage: 가상 머신이 손상될 경우 데이터 보존을 위해 최소 100GB의 루트 볼륨과 최소 100GB의 추가 NFS 볼륨을 제공하십시오.
+* 호스팅 요구 사항: 자동 도구 업데이트를 위해 클러스터 연결 및 인터넷 액세스가 가능한 위치에 VM을 배치하십시오. 자동 업데이트를 수행하려면 해당 머신이 HTTPS를 통해 다음 엔드포인트에 액세스할 수 있어야 합니다.
++
+** https://api.uhc.netapp.com[]
+** https://gql.aiq.netapp.com[]
++
+인터넷 접속이 불가능한 경우 NetApp에 문의하여 안내를 받으십시오.
+
+
+
+* 권장 패키지: 액세스를 용이하게 하기 위해 웹 서버를 설치하십시오.
+
+
+또한 가상 머신이 HTTPS를 통해 원격 측정 엔드포인트(https://support.netapp.com/[]에 연결할 수 있는지 확인하여 NetApp이 업그레이드 계획에 대한 AutoSupport 정보를 수신할 수 있도록 하십시오.
+
+.단계
+. link:https://console.netapp.com/automationHub["NetApp Console 자동화 허브로 이동"]업그레이드 상태 점검 도구 타일을 찾아 업그레이드 상태 점검 도구 바이너리를 다운로드하십시오.
+. Upgrade Health Checker 가상 머신을 설정하고 SSH를 사용하여 원하는 위치에 바이너리를 배치하십시오.
+. Upgrade Health Checker의 디지털 서명을 확인하십시오.
++
+Upgrade Health Checker는 공개 코드 서명 인증서(`UHC-Linux-codesigning-certificate-public.pem`와 중간 및 루트 인증서 체인(`UHC-Linux-chain-certificates-public.pem`을 보유하고 있습니다.
+
++
+.. (선택 사항) 코드 서명 인증서를 체인과 비교하여 확인합니다.
++
+[listing]
+----
+openssl verify -CAfile UHC-Linux-chain-certificates-public.pem UHC-Linux-codesigning-certificate-public.pem
+----
++
+ `OK` 출력은 유효한 신뢰 체인을 확인합니다.
+
+.. 코드 서명 인증서에서 공개 키를 추출합니다.
++
+[listing]
+----
+openssl x509 -in UHC-Linux-codesigning-certificate-public.pem -pubkey -noout -out UHC-Linux-public.pub
+----
+.. 공개 키를 사용하여 Upgrade Health Checker 바이너리에 대해 서명 파일((`uhc.sig`)을 검증하십시오.
++
+[listing]
+----
+openssl dgst -sha256 -verify UHC-Linux-public.pub -signature uhc.sig uhc
+----
++
+ `Verified OK`의 출력은 서명이 유효함을 확인합니다.
+
+
+
+. ONTAP 클러스터 액세스를 위한 서비스 계정 및 역할을 구성하십시오. Upgrade Health Checker를 통한 클러스터 액세스를 위해서는 서비스 역할을 REST 역할로 생성하십시오.
++
+
+NOTE: Ansible 플레이북을 작성하여 모든 ONTAP 클러스터에 역할과 사용자를 자동으로 배포할 수 있습니다.
+
++
+http 애플리케이션용 서비스 계정을 생성해야 합니다. 다음 CLI 명령을 사용하여 필요한 권한을 구성하십시오.
+
++
+[source, cli]
+----
+security login rest-role create -role uhctool -api /api -access readonly -vserver
+
+security login rest-role create -role uhctool -api /api/support/autosupport -access read_create_modify -vserver
+
+security login rest-role create -role uhctool -api /api/support/autosupport/messages -access read_create_modify -vserver
+
+vserver services web access create -name spi -role uhctool -vserver
+
+security login create -user-or-group-name uhctool -role uhctool -application http -authentication-method password
+
+security login create -user-or-group-name uhctool -role uhctool -application ssh -authentication-method password
+----
+. 애플리케이션에 대한 액세스를 보호하기 위해 자격 증명 관리를 설정합니다.
++
+예를 들어 CyberArk와 Conjur를 사용하는 경우 yaml 파일이나 명령줄을 통해 자격 증명을 전달하지 않도록 환경을 구성할 수 있습니다.
+
++
+.. 필요한 CyberArk 금고를 생성하세요:
++
+... 애플리케이션 자격 증명과 비밀 키를 저장할 Safe(Main-Conjur-Safe)를 생성합니다
+... Conjur 호스트 ID와 API 키를 보유하는 Safe(API-Credentials-Safe)를 생성합니다
+... 필요한 인증서를 보유하는 Safe(Conjur-SSL-Certificate)를 생성합니다
+
+
+.. 이 애플리케이션에 대한 구성 파일(Conjur.conf)과 ID 파일(Conjur.identity)을 생성합니다.
++
+... Conjur.conf
++
+[listing]
+----
+account:
+plugins:[]
+appliance_url: https://FQDN
+cert_file: /etc/conjur.pem
+----
+... Conjur.identity
++
+[listing]
+----
+machine https://FQDN/authn
+login host /prodvault/devops/<Main-Conjur-Safe>/host1
+password XXXXXX
+----
+
+
+
+
++
+다음은 Ansible 플레이북에서 CyberArk와 Conjur를 사용하는 방법의 예입니다.
+
++
+.. Conjur Ansible Lookup Plugin이 포함된 Conjur Ansible Collection을 Ansible Host에 설치합니다.
++
+[listing]
+----
+ansible-galaxy collection install cyberark.conjur
+----
+.. YAML 파일에서 CyberArk의 사용자 이름과 암호를 가져오는 작업을 생성합니다.
++
+[listing]
+----
+conjur_username: "{{ lookup('cyberark.conjur.conjur_variable', 'prodvault/devops/<Main-Conjur-Safe>/<Account name>/username', validate_certs=false) }}"
+conjur_password: "{{ lookup('cyberark.conjur.conjur_variable', 'prodvault/devops/<Main-Conjur-Safe>/<Account name>/password', validate_certs=false) }}"
+----
+
+
+
+
+.다음 단계
+업그레이드 상태 검사기를 사용하여 link:generate-report-upgrade-health-checker.html["업그레이드 보고서 생성"]으로 ONTAP 업그레이드를 계획할 수 있습니다.

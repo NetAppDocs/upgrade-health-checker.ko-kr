@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="ff8b2ca2f375281780741c458550f6b9" category="summary">대규모의 복잡한 환경에서 ONTAP 업그레이드를 계획할 때 수동 작업을 줄이기 위해 업그레이드 상태 점검 보고서 생성을 자동화할 수 있습니다.</block>
+  <block id="851802a6ceccf3253b5814d265b9d85f" category="doc">Upgrade Health Checker를 사용하여 업그레이드 계획 생성 자동화</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
+  <block id="bb4632cd1e5a77d2d2a6ad9870b1edf3" category="inline-link-macro">ONTAP 업그레이드 보고서를 생성합니다</block>
+  <block id="cbf0409b66c9c191f2bbf7aebb95c7c6" category="list-text">업그레이드 보고서가 성공적으로 생성되도록 하려면 <block ref="447f94c751f3bc061f73c40c9324c9a3" category="inline-link-macro-rx"></block>에 설명된 필수 설정 단계와 일회성 작업을 모두 완료하십시오.</block>
+  <block id="7c3f7cf7c460927ff3a0856e45060529" category="list-text">사용 환경에 맞는 매개 변수를 사용하여 Upgrade Health Checker를 실행하는 스크립트를 생성합니다.</block>
+  <block id="4a2fc7904851b98a582cefc5576f3c0b" category="paragraph">다음은 월요일부터 금요일까지 오전 4시에 해당 도구를 실행하는 cronjob의 예입니다. 바이너리 파일과 config.yaml 파일은 /opt/uhc/tool/에 설치되었습니다.</block>
+  <block id="af6a390b44e1466e540d2c134316ae89" category="paragraph">Bash 스크립트:</block>
+  <block id="a16591c11e618548314d95d8cb9f466c" category="paragraph">Cron 작업:</block>
+  <block id="4a419eed497d5a9cc6325bd677912447" category="list-text">업그레이드 상태 검사기가 검사를 완료하면 <block ref="878983117a2370e5b702db49786da067" prefix=" " category="inline-code"></block> 폴더로 이동하여 업그레이드 계획 및 클러스터 보고서를 확인하십시오.</block>
+  <block id="e634565f95b1012e8b64a5e25f71b4d2" category="admonition">프로그램을 실행할 때마다 고유한 실행으로 간주되며, 관련<block ref="878983117a2370e5b702db49786da067" prefix=" " category="inline-code"></block> 폴더에 모든 관련 데이터, 로그 및 결과가 저장됩니다.</block>
+  <block id="f02cb42b34717f58312e87a6c6a3f0b7" category="list-text">보고서 파일(이름은<block ref="bc3548bedd723b0ffedd796c759eafb1" prefix=" " category="inline-code"></block>)을 웹 브라우저에서 열어 보고서를 확인하십시오. Upgrade Health Checker를 원격 호스트에서 실행하는 경우 먼저 보고서 파일을 웹 브라우저에서 볼 수 있는 컴퓨터로 다운로드하십시오.</block>
+  <block id="4e37054133b8a9e3c2adbe0fdc102c34" category="paragraph">로그 경로 및 보고서 경로는 다음과 같습니다.</block>
+  <block id="d4f180313d0c382395fb5552082544bf" category="list-text">로그 경로:<block ref="056716fdc8e198679abe9b3946c631cf" prefix=" " category="inline-code"></block></block>
+  <block id="63c8b5222d1ee8d79de6660da3eaef50" category="list-text">보고서 경로:<block ref="42dfa52dc698f1548746e65dadae2dba" prefix=" " category="inline-code"></block></block>
+  <block id="848fb46d80fa326851b061b6dfad66be" category="summary">업그레이드 상태 점검 도구에 대한 자주 묻는 질문(FAQ).</block>
+  <block id="2a4d8488d929be6bef9bc441b32078c7" category="doc">업그레이드 상태 점검 도구 FAQ</block>
+  <block id="9f4e75bee30b521f1814643b0bd0dc50" category="section-title">Upgrade Health Checker는 Upgrade Advisor와 어떻게 다릅니까?</block>
+  <block id="c9a3310bb7166dc242d8db4610b88f5a" category="paragraph">Upgrade Health Checker는 규모가 크거나 복잡한 환경, 인터넷 접속이 제한적인 환경, 또는 기존 자동화 및 오케스트레이션 프레임워크를 사용하는 사용자에게 적합한 온프레미스 도구입니다. Upgrade Advisor는 클라우드 기반의 사용자 인터페이스 중심 환경을 선호하는 소규모 환경의 사용자에게 적합합니다.</block>
+  <block id="c71db9cf38a7cbb70d70aff81012ef9c" category="inline-link-macro">업그레이드 상태 점검기</block>
+  <block id="1e3c19e3742fbfc0e6dd22bb91d109a3" category="inline-link-macro">업그레이드 어드바이저</block>
+  <block id="9e68fe45421fd86216ab2ab40ec2be80" category="paragraph"><block ref="0135cdd7de5c710c0abe4fd00f89a624" category="inline-link-macro-rx"></block> 및 <block ref="c0591f277fe5d470be3ec183cffeb8f2" category="inline-link-macro-rx"></block>에 대해 자세히 알아보고 필요에 가장 적합한 도구를 결정할 수 있습니다.</block>
+  <block id="054491cca3f97d47c59c1b49d77b172f" category="section-title">Upgrade Health Checker 보고서에는 어떤 정보가 포함되어 있습니까?</block>
+  <block id="92134baadd628aac9e12056c62e0dc5e" category="paragraph">업그레이드 상태 점검 보고서는 ONTAP 클러스터를 업그레이드하기 전에 해결해야 할 잠재적인 차단 요소 및 경고, 클러스터와 관련된 위험, 그리고 업그레이드할 ONTAP 버전의 새로운 기능 및 개선 사항에 대한 자세한 정보를 제공합니다.</block>
+  <block id="a17989ff5f0962c2877477c74338ae61" category="section-title">Upgrade Health Checker는 인터넷 연결 없이 사용할 수 있습니까?</block>
+  <block id="3880fea319e437eea669686be6861626" category="paragraph">Upgrade Health Checker를 실행하는 데 인터넷 연결이 필요하지 않습니다. ONTAP 클러스터의 현재 구성 데이터를 사용하여 현장에서 업그레이드 계획 및 보고서를 생성합니다.</block>
+  <block id="a6d52acf3204cc6a87bd7aaed6f3eef7" category="paragraph">단, 자동 도구 업데이트를 위해서는 인터넷 연결이 필요합니다. 인터넷 연결이 불가능한 환경에 있는 경우, NetApp에 문의하여 업그레이드 상태 점검 도구를 최신 상태로 유지하는 방법에 대한 지침을 받으십시오.</block>
+  <block id="982d129000c1d3e533f5e8593c670b3d" category="section-title">Upgrade Health Checker는 어떤 ONTAP 버전을 지원합니까?</block>
+  <block id="4c8d49c7d71cf0e79e3740d7cf67dd62" category="paragraph">업그레이드 상태 검사기는 ONTAP 9.11.1 이상으로의 업그레이드를 지원합니다.</block>
+  <block id="b7c89596c79e950e74638e5d75919aee" category="summary">Upgrade Health Checker를 사용하여 단일 또는 여러 ONTAP 클러스터에 대한 업그레이드 계획을 생성할 수 있습니다.</block>
+  <block id="a46b239b0ed00e39f2903761716caf03" category="doc">Upgrade Health Checker를 사용하여 업그레이드 계획 생성</block>
+  <block id="e170a21083188ebc6e00ef17f5167dd7" category="inline-link-macro">업그레이드 보고서 생성 자동화</block>
+  <block id="7b29ddbb31d8dbabbb6926d591661d76" category="paragraph">또한 여러 클러스터로 구성된 크고 복잡한 환경을 운영하는 경우 최신 업그레이드 계획을 유지 관리하는 데 도움을 받기 위해 <block ref="c8a25bc0c3f7d35cbdee90d212a324b8" category="inline-link-macro-rx"></block>할 수도 있습니다.</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">시작하기 전에</block>
+  <block id="71ecafd5cabf66d9de4acfbc15f673f0" category="inline-link-macro">Upgrade Health Checker의 입력 매개변수에 대해 알아보십시오</block>
+  <block id="2aa522fa4ab716ccbf71bb82df8551f0" category="paragraph">특정 Upgrade Health Checker 매개변수 및 도구가 입력을 수락하는 우선순위 순서에 대한 자세한 내용은 <block ref="075d48f32d1c61c7bc401a6884f7cf92" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="a07ce3421753f08f6e19c05607896afb" category="list-text">처음 실행하기 전에 바이너리에 대한 실행 권한을 설정하십시오.</block>
+  <block id="c2321a704fe7517e5c8db1b11f887bd6" category="admonition">Upgrade Health Checker는 독립 실행형 패키지이므로 실행하기 전에 압축을 풀어야 합니다. 이 과정은 몇 초 정도 소요될 수 있습니다.</block>
+  <block id="42885b6d63050f13b1b1133ef44eb317" category="list-text">Upgrade Health Checker를 완전히 실행하기 전에 이 툴이 클러스터 및 필수 엔드포인트에 연결할 수 있는지 확인하기 위해 종합적인 검사를 수행하십시오.</block>
+  <block id="a6af1159f5885cc5683819f03f5eba4c" category="paragraph">종합적인 점검을 통해 Upgrade Health Checker를 호스팅하는 가상 머신이 다음을 갖추고 있는지 확인합니다.</block>
+  <block id="d333aef011149b38d807ae69b77df0db" category="list-text">HTTPS를 통한 ONTAP 클러스터 IP 주소 연결</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
+  <block id="1bda50643710bdee88e5f7b89ecfce86" category="list-text">HTTPS를 통한 원격 측정 엔드포인트(<block ref="dff1129755a63688cdc5de28dfe608ad" category="inline-link-rx"></block>) 연결</block>
+  <block id="684e35b64e667ed5386392f6bc72425b" category="list-text">HTTPS를 통한 자동 업데이트 엔드포인트(<block ref="7b0c3a92f481d16df4dd5efff5f61700" category="inline-link-rx"></block> 및 <block ref="75a282c90668bc1468d683bacd2cabd2" category="inline-link-rx"></block>)에 대한 연결</block>
+  <block id="7694967e044dd1d2923b0cea4e472179" category="list-text">최소 4GB의 여유<block ref="d42b9c57d24cf5db3bd8d332dc35437f" prefix=" " category="inline-code"></block> 공간</block>
+  <block id="727e26a3103d69ba9d982a7013910355" category="list-text">(선택 사항) 구성 파일을 사용하여 매개변수를 저장하려면 바이너리를 다운로드한 위치와 동일한 위치에 있는 <block ref="1010e3344617b31dd1b22e5cb7bd6833" prefix=" " category="inline-code"></block> 파일의 이름을 <block ref="259fe82e12a866f01123927480c7851b" prefix=" " category="inline-code"></block>로 변경하십시오.</block>
+  <block id="ea20ff07be154a6d361686df025bbc38" category="paragraph">다음은 config.yaml 파일의 예입니다.</block>
+  <block id="b13d6443b5efce5469e1286fac0475fa" category="list-text">업그레이드할 ONTAP 버전을 입력하고 EULA에 동의한 후 필요에 따라 추가 매개변수를 포함하여 Upgrade Health Checker를 실행하십시오.</block>
+  <block id="e1cd167d71886d6214cd69f14f6670c3" category="admonition">EULA는 여러 페이지로 구성된 문서입니다. <block ref="a181a603769c1f98ad927e7367c7aa51" prefix=" " category="inline-code"></block>를 입력하여 전체 문서를 한 번에 보고 <block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block>를 입력하여 동의하십시오.</block>
+  <block id="a7138096e367ba1f9aa626ce742f7a7e" category="paragraph">클러스터의 AutoSupport 로그가 다운로드된 후 처리에는 일반적으로 클러스터 노드 수에 따라 1~2분이 소요됩니다. ONTAP 소프트웨어 버전마다 AutoSupport 수집 방식이 다르기 때문에 업그레이드 상태 검사기 실행 시간은 클러스터의 현재 부하와 현재 ONTAP 버전에 따라 달라집니다.</block>
+  <block id="ddee22b7e916c6ae2d3106c8d7cfd865" category="list-text"><block ref="075d48f32d1c61c7bc401a6884f7cf92" category="inline-link-macro-rx"></block>을 참조하여 사용 가능한 Upgrade Health Checker 매개변수, 입력 우선순위 순서 및 특정 매개변수의 기본값을 숙지하십시오.</block>
+  <block id="06bf55f53800587243aa18867ccc9b0c" category="paragraph">입력 매개변수 가이드에서는 워크플로를 간소화하기 위해 사용자 지정 구성 파일 경로와 실행 경로를 지정하는 방법에 대한 정보도 제공합니다. 보고서와 로그를 효율적으로 정리하려면 각 클러스터에 대한 사용자 지정 출력 디렉터리를 만드는 것이 좋습니다.</block>
+  <block id="bef31ea9ddf34bff75792f2fff0d5cbc" category="list-text">EULA를 수락하고 대상 ONTAP 버전 및 추가 매개 변수를 입력하여 업그레이드 상태 검사기를 실행합니다.</block>
+  <block id="d35e5d5961dfaa8f5243866aeef147f3" category="admonition">프로그램을 실행할 때마다 "고유한 실행"이 되며 관련<block ref="878983117a2370e5b702db49786da067" prefix=" " category="inline-code"></block> 폴더에 모든 관련 데이터, 로그 및 결과가 포함됩니다.</block>
+  <block id="08e04af94bbf61d680a4a44d4edb4111" category="list-text">웹 브라우저에서 보고서 파일(<block ref="bc3548bedd723b0ffedd796c759eafb1" prefix=" " category="inline-code"></block>)을 열어 보고서를 확인하십시오. 원격 호스트에서 실행하는 경우 먼저 보고서 파일을 웹 브라우저에서 보고서를 볼 수 있는 시스템으로 다운로드하십시오.</block>
+  <block id="4b88cca218b188588aa2a452e46894da" category="summary">Upgrade Health Checker는 ONTAP 업그레이드를 성공적으로 완료하는 데 도움이 되는 자세한 정보와 권장 사항을 제공하는 업그레이드 자문 서비스 도구입니다.</block>
+  <block id="e75e96e756ff4d38a10cdee84526ca22" category="doc">업그레이드 상태 점검 도구에 대해 알아보십시오</block>
+  <block id="88e9e7bdabbf15e882c2c1d5c1356ba0" category="paragraph">Upgrade Health Checker는 ONTAP 업그레이드를 성공적으로 완료하는 데 도움이 되는 자세한 정보와 권장 사항을 제공하는 업그레이드 자문 서비스 도구입니다. 현장에서 포괄적인 상태 점검을 수행하여 업그레이드를 수행하기 전에 해결해야 하는 차단 요소와 경고를 식별합니다.</block>
+  <block id="aa3fb0007a6e493d6ff6af5e4cfd6ea9" category="paragraph">Upgrade Health Checker는 기존 자동화 및 오케스트레이션 프레임워크에 통합되어 단일 또는 여러 클러스터 업그레이드를 지원합니다. 최신 AutoSupport 데이터를 사용하여 클러스터 관련 위험 요소, 업그레이드할 ONTAP 버전의 새로운 기능 및 개선 사항, ONTAP 업그레이드를 시도하기 전에 수행해야 할 조치에 대한 상세하고 정확한 보고서를 생성합니다.</block>
+  <block id="e7a7f914c2fd76fa002667ce774516e8" category="paragraph">Upgrade Health Checker에 대한 자세한 내용은 <block ref="6a92c3eccbf08c1bc6caa0a6e92c02bb" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">법적 고지</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">법적 고지사항은 저작권 표시, 상표, 특허 등에 대한 접근을 제공합니다.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">저작권</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">상표</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, NETAPP 로고 및 NetApp 상표 페이지에 나열된 마크는 NetApp, Inc.의 상표입니다. 다른 회사 및 제품 이름은 해당 소유자의 상표일 수 있습니다.</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">특허</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">NetApp이 소유한 특허의 현재 목록은 다음에서 확인할 수 있습니다:</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">개인정보 보호정책</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">고지 파일에는 NetApp 소프트웨어에 사용된 타사 저작권 및 라이선스에 대한 정보가 포함되어 있습니다.</block>
+  <block id="b9497e3cda04aa10a25628bf0b021f6a" category="summary">Upgrade Health Checker를 다운로드하여 최신 버전의 ONTAP로 업그레이드하기 전에 현장에서 포괄적인 보고서를 생성할 수 있습니다.</block>
+  <block id="ce2d4be7e0d93c8b156f834ce3704614" category="doc">Upgrade Health Checker를 다운로드하고 설정합니다</block>
+  <block id="55dcd8cbc9d164986479594db66fd89e" category="paragraph">다음 사양으로 Upgrade Health Checker용 가상 머신을 설정하십시오.</block>
+  <block id="cf0860ffd4dc1929d768f74d92735b75" category="list-text">처리 및 메모리: m5.large VM 또는 2개의 vCPU 및 8GiB RAM이 있는 동등한 제품.</block>
+  <block id="c7ca991550b74c4fb5521603081f476c" category="list-text">권장 운영 체제: 최적의 호환성을 위한 Ubuntu 22.04.</block>
+  <block id="28a03eb4af7c5f6abf99620ada6c6cfb" category="list-text">Storage: 가상 머신이 손상될 경우 데이터 보존을 위해 최소 100GB의 루트 볼륨과 최소 100GB의 추가 NFS 볼륨을 제공하십시오.</block>
+  <block id="492b15c109a51daa9f89630b4f2bb303" category="list-text">호스팅 요구 사항: 자동 도구 업데이트를 위해 클러스터 연결 및 인터넷 액세스가 가능한 위치에 VM을 배치하십시오. 자동 업데이트를 수행하려면 해당 머신이 HTTPS를 통해 다음 엔드포인트에 액세스할 수 있어야 합니다.</block>
+  <block id="072b499eacb5befcbdab2d6cc0fe02a0" category="list-text"><block ref="072b499eacb5befcbdab2d6cc0fe02a0" category="inline-link-rx"></block></block>
+  <block id="53fb0fc7c544c164b74ed43fbccd4384" category="list-text"><block ref="53fb0fc7c544c164b74ed43fbccd4384" category="inline-link-rx"></block></block>
+  <block id="907609b93268ffb2d43f03dae5c950a3" category="paragraph">인터넷 접속이 불가능한 경우 NetApp에 문의하여 안내를 받으십시오.</block>
+  <block id="ad9d14ce6f324c6a7d87f50e2b156ad7" category="list-text">권장 패키지: 액세스를 용이하게 하기 위해 웹 서버를 설치하십시오.</block>
+  <block id="222fc917ceda606917084c949d4918ba" category="paragraph">또한 가상 머신이 HTTPS를 통해 원격 측정 엔드포인트<block ref="dff1129755a63688cdc5de28dfe608ad" category="inline-link-rx"></block>에 연결할 수 있는지 확인하여 NetApp이 업그레이드 계획에 대한 AutoSupport 정보를 수신할 수 있도록 하십시오.</block>
+  <block id="513157ecd257a5ac15a2bf664400f97e" category="inline-link-macro">NetApp Console 자동화 허브로 이동</block>
+  <block id="f7516c48eeea343f7fff7d7edbe475e0" category="list-text"><block ref="d29e77f401a63487e90236d789082319" category="inline-link-macro-rx"></block>업그레이드 상태 점검 도구 타일을 찾아 업그레이드 상태 점검 도구 바이너리를 다운로드하십시오.</block>
+  <block id="516fc188e817bb3cd710620ace1129a5" category="list-text">Upgrade Health Checker 가상 머신을 설정하고 SSH를 사용하여 원하는 위치에 바이너리를 배치하십시오.</block>
+  <block id="0243c7349a37a636f0d08348fc2b1ba7" category="list-text">Upgrade Health Checker의 디지털 서명을 확인하십시오.</block>
+  <block id="2093f13abbe3f1a90a7519a3aba24859" category="paragraph">Upgrade Health Checker는 공개 코드 서명 인증서<block ref="a1b0111e4810b200f4d7ad5020792ba6" prefix="(" category="inline-code"></block>와 중간 및 루트 인증서 체인<block ref="2cad9a6c3ca1368f7d8a3bdcbf540946" prefix="(" category="inline-code"></block>을 보유하고 있습니다.</block>
+  <block id="597feb8bdf5d1ae4b08b4cb86780638e" category="list-text">(선택 사항) 코드 서명 인증서를 체인과 비교하여 확인합니다.</block>
+  <block id="b5e84c44aa52f6d62828982b72ecdf65" category="paragraph"><block ref="e0aa021e21dddbd6d8cecec71e9cf564" prefix=" " category="inline-code"></block> 출력은 유효한 신뢰 체인을 확인합니다.</block>
+  <block id="e0fa928fd1e2158742a5741790c20b19" category="list-text">코드 서명 인증서에서 공개 키를 추출합니다.</block>
+  <block id="ef1641ccbd0951e08cb106c8bff6b5ca" category="list-text">공개 키를 사용하여 Upgrade Health Checker 바이너리에 대해 서명 파일(<block ref="9313952cdb30486dd70ab98e98ec59d4" prefix="(" category="inline-code"></block>)을 검증하십시오.</block>
+  <block id="94a2cf0aa74e751f770d9240dcbcb074" category="paragraph"><block ref="33a9cc0739a5a17f65e28cf0b260007f" prefix=" " category="inline-code"></block>의 출력은 서명이 유효함을 확인합니다.</block>
+  <block id="9f58de4245b2fb930c02c3766a7ff23f" category="list-text">ONTAP 클러스터 액세스를 위한 서비스 계정 및 역할을 구성하십시오. Upgrade Health Checker를 통한 클러스터 액세스를 위해서는 서비스 역할을 REST 역할로 생성하십시오.</block>
+  <block id="15ec8997d97cf2ca0a22a65e524b2811" category="admonition">Ansible 플레이북을 작성하여 모든 ONTAP 클러스터에 역할과 사용자를 자동으로 배포할 수 있습니다.</block>
+  <block id="d9e228dba301308afb2b46a1a951b363" category="paragraph">http 애플리케이션용 서비스 계정을 생성해야 합니다. 다음 CLI 명령을 사용하여 필요한 권한을 구성하십시오.</block>
+  <block id="c8bb94969a3153538fe3ed12d5ad5c4f" category="list-text">애플리케이션에 대한 액세스를 보호하기 위해 자격 증명 관리를 설정합니다.</block>
+  <block id="034a1ea726a7fbf3e2fc72fde8ed680d" category="paragraph">예를 들어 CyberArk와 Conjur를 사용하는 경우 yaml 파일이나 명령줄을 통해 자격 증명을 전달하지 않도록 환경을 구성할 수 있습니다.</block>
+  <block id="f2f2f12c645a941c4c701a0ad14f78da" category="list-text">필요한 CyberArk 금고를 생성하세요:</block>
+  <block id="6fecc57bc25e97c77bad1c6d06e7153d" category="list-text">애플리케이션 자격 증명과 비밀 키를 저장할 Safe(Main-Conjur-Safe)를 생성합니다</block>
+  <block id="60e537524e61e7f8a44bad3afa7cd330" category="list-text">Conjur 호스트 ID와 API 키를 보유하는 Safe(API-Credentials-Safe)를 생성합니다</block>
+  <block id="c4744df02da870bf92d6364705c156b6" category="list-text">필요한 인증서를 보유하는 Safe(Conjur-SSL-Certificate)를 생성합니다</block>
+  <block id="5afaba9cba7ce8de477f34d11d921a8b" category="list-text">이 애플리케이션에 대한 구성 파일(Conjur.conf)과 ID 파일(Conjur.identity)을 생성합니다.</block>
+  <block id="d5d68e242ebd9c5985b84661af24defa" category="list-text">Conjur.conf</block>
+  <block id="492114e082b9c7b687636701e7279aad" category="list-text">Conjur.identity</block>
+  <block id="f6b48feed8edaa886804f4713f44bc3f" category="paragraph">다음은 Ansible 플레이북에서 CyberArk와 Conjur를 사용하는 방법의 예입니다.</block>
+  <block id="1ae7cfb9fd42c03ec54a7688f331a4ca" category="list-text">Conjur Ansible Lookup Plugin이 포함된 Conjur Ansible Collection을 Ansible Host에 설치합니다.</block>
+  <block id="17ce5fd52d97f9d44f60001292f0ece9" category="list-text">YAML 파일에서 CyberArk의 사용자 이름과 암호를 가져오는 작업을 생성합니다.</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">다음 단계</block>
+  <block id="ec6bec433b1c1808064b71c6aaa7fd9e" category="inline-link-macro">업그레이드 보고서 생성</block>
+  <block id="4f3f18c8e521db17af2095588dd0cdbf" category="paragraph">업그레이드 상태 검사기를 사용하여 <block ref="4e7536d9527fcd8654c1859f9106fb67" category="inline-link-macro-rx"></block>으로 ONTAP 업그레이드를 계획할 수 있습니다.</block>
+  <block id="d10ee20124c466f6b668c45ea930a323" category="summary">ONTAP 클러스터에 대한 업그레이드 보고서 생성을 지원하기 위해 Upgrade Health Checker의 입력 매개변수에 대해 자세히 알아볼 수 있습니다.</block>
+  <block id="d53948ce39f427fd80052ec24da98866" category="paragraph">Upgrade Health Checker의 입력 매개변수와 CLI 인수, 구성 파일 또는 대화형 프롬프트를 통해 이러한 매개변수를 제공하여 ONTAP 클러스터에 대한 업그레이드 보고서 생성을 지원하는 방법에 대해 자세히 알아볼 수 있습니다.</block>
+  <block id="c238922030faaf9e95ce23006b54c970" category="section-title">입력 방법 우선순위</block>
+  <block id="323e191b40ba0123a2776c0baa05f62d" category="paragraph">업그레이드 상태 점검 도구는 모든 매개 변수에 대해 여러 입력 옵션을 제공합니다. 입력을 수락하는 우선 순위는 다음과 같습니다.</block>
+  <block id="1fb1195510f62422257687634f390233" category="list-text">CLI 인수(최우선 순위)</block>
+  <block id="4618fc736ac21a53b35ec29bf995ebbf" category="list-text">구성 파일 <block ref="259fe82e12a866f01123927480c7851b" prefix="(" category="inline-code"></block>)</block>
+  <block id="c02c10c922768d8394a86135898f5619" category="list-text">대화형 프롬프트(최하위 우선 순위)</block>
+  <block id="7556c6dfaef1a610d641f1e06894a16a" category="paragraph">매개 변수가 여러 방법을 통해 제공되는 경우 도구는 우선 순위가 가장 높은 소스의 값을 사용합니다.</block>
+  <block id="476013e859f7d89de288df5624801703" category="section-title">입력 매개변수</block>
+  <block id="70087224b93e8179deda7438fae8e843" category="section-title">클러스터 IP</block>
+  <block id="c75506e8c50acab63ae245a1d7b0b5c1" category="paragraph"><block ref="f844f00636430f7720fd87f6324b3230" prefix=" " category="inline-code"></block> 매개변수는 연결할 ONTAP 클러스터의 IP 주소 또는 호스트 이름을 지정합니다.</block>
+  <block id="46fe8388c120f6b58048d1a018a6afd3" category="paragraph">이 매개변수를 제공하는 우선 순위는 다음과 같습니다.</block>
+  <block id="4cf6ec16bbc58d590a5ed5d604261c0d" category="list-text">CLI 인수:<block ref="f844f00636430f7720fd87f6324b3230" prefix=" " category="inline-code"></block></block>
+  <block id="64695ef09ae96408388cbedcf0383906" category="list-text">구성 파일:<block ref="14e9ea31f56781fd98b7fd89ec2103d2" prefix=" " category="inline-code"></block></block>
+  <block id="2d87557ac59d802428f55e71d23090c2" category="list-text">대화형 프롬프트</block>
+  <block id="ff7c0fcd6a31e735a61c001f75426961" category="example-title">예</block>
+  <block id="4b2752f3b0cff1b050f607eb588b1cf5" category="list-text">CLI 인수:</block>
+  <block id="8705ee9dda5db66410c43280483663ae" category="paragraph"><block ref="633644433d59e911bf24e3ee42026f1c" prefix="" category="inline-code"></block></block>
+  <block id="99d90ff55a2bcc2901f33c70d5da4557" category="list-text">Config.yaml:</block>
+  <block id="e48417b724fe79f0e05bc8d1f1e96bf6" category="list-text">대화형 모드(위에 제공되지 않은 경우):</block>
+  <block id="7cc488682e6e08d5b9cba7f0fd635b96" category="paragraph">도구에서 다음과 같은 메시지가 표시됩니다.<block ref="b8c8be6f0464c4f81abdce849becc93a" prefix=" " category="inline-code"></block></block>
+  <block id="ff7fcd640932394a53f74f04125835e1" category="section-title">클러스터 사용자 이름</block>
+  <block id="3f6db82e6215144725062caff32e00c1" category="paragraph"><block ref="8e9924bb9831f9d205b67adb9aa9c89c" prefix=" " category="inline-code"></block> 매개변수는 ONTAP 클러스터 인증에 사용할 사용자 이름을 지정합니다.</block>
+  <block id="ec0729156f9c9d375c3a86407ed5d613" category="list-text">CLI 인수:<block ref="8e9924bb9831f9d205b67adb9aa9c89c" prefix=" " category="inline-code"></block></block>
+  <block id="1f919129381394e32842e43afcf7e6d0" category="list-text">구성 파일:<block ref="115e9f5736e67868a412e572990da972" prefix=" " category="inline-code"></block></block>
+  <block id="369eab05dd6d1b73169df19ea569f4a5" category="paragraph"><block ref="e5dd3266ede07087bef357c74c6fa8fc" prefix="" category="inline-code"></block></block>
+  <block id="9732567210f4e95a69f5c98223b32c6d" category="paragraph">도구에서 다음과 같은 메시지가 표시됩니다.<block ref="0ded070da67db9d7009666ba2c8c4582" prefix=" " category="inline-code"></block></block>
+  <block id="0c191ee206a91460fd94e2ff976a38e7" category="section-title">클러스터 암호</block>
+  <block id="0d0af704398a96addaa3af129dd6fa84" category="paragraph"><block ref="3bd841f8e7ecc1cb3406ab1cec889115" prefix=" " category="inline-code"></block> 매개변수는 ONTAP 클러스터 인증에 사용할 암호를 지정합니다.</block>
+  <block id="5b0d42d6408e4c88dd02bd1617fc7599" category="list-text">CLI 인수:<block ref="3bd841f8e7ecc1cb3406ab1cec889115" prefix=" " category="inline-code"></block></block>
+  <block id="247c9e53ad680999bd6359f61f1efa15" category="list-text">구성 파일:<block ref="b3a147e2cf79950f6952976c2b24b015" prefix=" " category="inline-code"></block></block>
+  <block id="9a04c5073fe87df0927bccdb06b7784b" category="list-text">대화형 프롬프트(보안 입력)</block>
+  <block id="127b88eddfd104f63a7996f7315ab36d" category="list-text">CLI 인수(보안상 권장하지 않음):</block>
+  <block id="02796d68d841681536e55aa84501a5e0" category="paragraph"><block ref="4491732129e2c8fa117ab30f9c69fc79" prefix="" category="inline-code"></block></block>
+  <block id="5959717273c29c4753bb94cb3a9784e2" category="list-text">Config.yaml(파일 권한이 제한되어 있는지 확인):</block>
+  <block id="a9095116df40436c4ef219e805c345ee" category="list-text">대화형 모드(권장 - 암호 숨김):</block>
+  <block id="f5001e8cc356cc13693228d3976db02a" category="paragraph">도구에서 다음과 같은 메시지가 표시됩니다.<block ref="c5937dba7ed853571bb7b6e83e54f40e" prefix=" " category="inline-code"></block></block>
+  <block id="6bb3222dda6de7575b34020a07187451" category="section-title">타겟 ONTAP 버전</block>
+  <block id="6fdcd93cab77d35597a1dc0faea379fb" category="paragraph"><block ref="8fea203bf97a25109f25c0a37994e292" prefix=" " category="inline-code"></block> 매개변수는 분석을 위해 업그레이드할 ONTAP 버전을 지정합니다. 기존 클러스터 ONTAP 버전을 유지하려면 "current"를 사용합니다.</block>
+  <block id="5c2d47f6fb85e702b227699b1e2b7e00" category="list-text">CLI 인수:<block ref="8fea203bf97a25109f25c0a37994e292" prefix=" " category="inline-code"></block></block>
+  <block id="bd251e17c91b23ef60ed75bf80817074" category="list-text">구성 파일:<block ref="2271a79660cb8125d47a4eb72c5dc9b9" prefix=" " category="inline-code"></block></block>
+  <block id="e45a983c88b69f722274f95dbaf85607" category="list-text">대화형 선택 메뉴</block>
+  <block id="a8cdf50950825af99fb80665a9db4299" category="paragraph">업데이트된 ONTAP 버전:<block ref="235e540a452b98abb270417100e3aad0" prefix=" " category="inline-code"></block></block>
+  <block id="fec7f84e2641348d1dacfe1ac269f4aa" category="paragraph">현재 ONTAP 버전 유지:<block ref="992866f5dcd6092ba3e5e63156bd6c12" prefix=" " category="inline-code"></block></block>
+  <block id="29d64e316e6219a7a595656472fc4bb7" category="paragraph">도구에 사용 가능한 버전이 표시되고 선택하라는 메시지가 표시됩니다</block>
+  <block id="9ffbe169b7db1bee5ce86eb6d1e15a5f" category="section-title">EULA에 동의합니다</block>
+  <block id="354de4470baa97b0784285a30191cad9" category="paragraph"><block ref="c4e1b5b89a32724aede5f2b9687d32b0" prefix=" " category="inline-code"></block> 매개변수는 최종 사용자 라이선스 계약을 수락할지 여부를 지정합니다. 계속하려면 <block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>로 설정해야 합니다.</block>
+  <block id="4bcdff40c528c94a3ac33fceac0ae5c7" category="list-text">CLI 인수:<block ref="c4e1b5b89a32724aede5f2b9687d32b0" prefix=" " category="inline-code"></block></block>
+  <block id="04a7a851ba6ccfc3c862e280dff9d47a" category="list-text">구성 파일:<block ref="9e5121ad073324f8fac5f124152a97f5" prefix=" " category="inline-code"></block></block>
+  <block id="c216150692debe7132587c2b181f4aef" category="paragraph"><block ref="2716072d4c7e90df917c2ed9fa2abf9e" prefix="" category="inline-code"></block></block>
+  <block id="f4de0242a000b8295d35188be2e824b2" category="paragraph">이 도구는 EULA를 표시하고 수락 여부를 묻는 메시지를 표시합니다</block>
+  <block id="75b0c2229298fb17b407a9d0da5c9c9a" category="section-title">구성 파일 경로</block>
+  <block id="6bf36f6a417be822fcc03507ba0f2006" category="paragraph"><block ref="aa0d829d2fcb248ba06549edc2bd07ac" prefix=" " category="inline-code"></block> 매개변수는 사용자 지정 구성 YAML 파일의 경로를 지정합니다.</block>
+  <block id="80c59ccf1fb0819c3f4ccd508dbec2f4" category="list-text">CLI 인수:<block ref="aa0d829d2fcb248ba06549edc2bd07ac" prefix=" " category="inline-code"></block></block>
+  <block id="505c939cebf726feebd6fc21d6bf7984" category="list-text">기본값:<block ref="259fe82e12a866f01123927480c7851b" prefix=" " category="inline-code"></block></block>
+  <block id="d7cc232149069938fc37cdf71c773fbb" category="paragraph"><block ref="a2f5bccf595b68d5e02be2530bda057a" prefix="" category="inline-code"></block></block>
+  <block id="8ad3c6f951b4045f04413eec3b7922c4" category="list-text">기본값(제공되지 않은 경우):</block>
+  <block id="a6a868631bba716656e3740af43fa00a" category="paragraph">이 도구는 현재 디렉토리에서 config.yaml을 찾습니다</block>
+  <block id="cabfa16fb44ee4ead33f8423edc88b13" category="section-title">실행 출력 경로</block>
+  <block id="a9e5390a602948699327340c04cc6377" category="paragraph"><block ref="0b5540609e2d46235709175fd8e2693b" prefix=" " category="inline-code"></block> 매개변수는 실행 출력 및 보고서를 저장하기 위한 사용자 지정 디렉터리를 지정합니다.</block>
+  <block id="dee6a3a660575ea189bf39e25c743edd" category="list-text">CLI 인수:<block ref="0b5540609e2d46235709175fd8e2693b" prefix=" " category="inline-code"></block></block>
+  <block id="4c24c0554e450c08504c393b159e47d7" category="list-text">구성 파일:<block ref="fe00e5cee944304042641fe263ea293d" prefix=" " category="inline-code"></block></block>
+  <block id="06d1d87ce6d9bd664108e7dc9dc78f5a" category="list-text">기본값:<block ref="c3edf6fb65df0152ea3db49d109d41f0" prefix=" " category="inline-code"></block></block>
+  <block id="6586cf31274f0b98c03ba1e36f40f3da" category="paragraph"><block ref="8e3bb742ea380a81db12a3fd40bc3db3" prefix="" category="inline-code"></block></block>
+  <block id="dadb196e65d9623c2742a0077f0fce83" category="paragraph">이 도구는 <block ref="c3edf6fb65df0152ea3db49d109d41f0" prefix=" " category="inline-code"></block> 디렉토리를 사용합니다.</block>
+  <block id="5830703e51e0e0d6534107242f258d4c" category="section-title">호환성 검사 건너뛰기</block>
+  <block id="72818ddc455895483f200f3ba5a8231e" category="paragraph"><block ref="66a905f649ae7fc669e70a476c6631c3" prefix=" " category="inline-code"></block> 매개변수는 하드웨어 호환성 검사를 건너뛰고 업그레이드하려는 지정된 ONTAP 버전을 사용합니다.</block>
+  <block id="e2f03f072c7c52e0c11a31e688f75d0c" category="admonition">대상 ONTAP 버전이 하드웨어와 호환되는지 확실한 경우에만 이 옵션을 사용하십시오.</block>
+  <block id="5abcb79d38d8843ecfc75361c67dda7d" category="list-text">CLI 인수:<block ref="66a905f649ae7fc669e70a476c6631c3" prefix=" " category="inline-code"></block></block>
+  <block id="d435f573d6c2d377c4f8b7c27fad0f8b" category="list-text">구성 파일:<block ref="c7bcd33a8fcd39b481e4afa17e20c6fe" prefix=" " category="inline-code"></block></block>
+  <block id="98277f883ea7a0cc9b33c29219b90421" category="list-text">기본값:<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block></block>
+  <block id="57443621322267804eb3eb209a7177d6" category="paragraph"><block ref="f61062a0552c0603acf718c601358cd2" prefix="" category="inline-code"></block></block>
+  <block id="b100fd455b43434a4fe5f09de5b31e2c" category="section-title">원격 측정을 비활성화합니다</block>
+  <block id="32037ceaa25ee46f50c49eafc2ece95f" category="paragraph">원격 측정 기능을 비활성화하려면 다음 내용을 <block ref="259fe82e12a866f01123927480c7851b" prefix=" " category="inline-code"></block> 파일에 추가하세요.</block>
+  <block id="5de0adb95551ff3c1458ae6247a4959f" category="section-title">자동 업데이트 비활성화</block>
+  <block id="310675af32778e28645e16942a8f604d" category="paragraph">업그레이드 상태 검사기의 자동 업데이트를 비활성화하려면 다음 내용을 <block ref="259fe82e12a866f01123927480c7851b" prefix=" " category="inline-code"></block> 파일에 추가하십시오.</block>
+  <block id="bfbc4b4e9ef684fdccbf4518a5a9d2b7" category="section-title">각 입력 방법을 사용하는 예</block>
+  <block id="f232d111a794eb5f37dffe4641d22bfe" category="section-title">결합된 CLI 인수</block>
+  <block id="5363982494efe20879ee60ad65e0ad59" category="section-title">Config.yaml 파일</block>
+  <block id="c66f19bf3e23bb1d8f53417edec7a608" category="section-title">대화형 모드</block>
+  <block id="61ff0695e48b9e7fcc7c4c62527dd02a" category="paragraph">필수 입력 매개변수를 대화형으로 표시하려면 인수 없이 Upgrade Health Checker를 실행하십시오.</block>
+  <block id="3a7013200321f0af417defd7253a0867" category="section-title">추가 명령</block>
+  <block id="0b5a1f22b334d555e2c35ceb23b9e08a" category="paragraph">이러한 명령은 도구의 전체 실행 외에 몇 가지 추가 기능을 제공합니다.</block>
+  <block id="aaf12997ac25ce871e8b4969dfada046" category="list-text">도움말 표시</block>
+  <block id="829bc0a083ea00ab6a64abe899ca0047" category="paragraph"><block ref="42e4e03a7fe5f67a66f1b92d7683bbb9" prefix="" category="inline-code"></block></block>
+  <block id="77fd00c3b3d01651b63a258dbc2f05b1" category="list-text">버전 표시</block>
+  <block id="c1cf9a31e27add8a5df5f609125770a1" category="paragraph"><block ref="262a2406c2bbf20f92a5689bf92413cd" prefix="" category="inline-code"></block></block>
+  <block id="897f3d371462811c080a4f5edafdb445" category="list-text">클러스터 연결 테스트</block>
+  <block id="9f75c9be5a88eae06a5482c0c8635a02" category="paragraph"><block ref="f609451ce7593e4800e051b5d8df3dee" prefix="" category="inline-code"></block></block>
+  <block id="a53c09b10d81119ee734f13db16b5b60" category="list-text">원격 측정 연결 테스트</block>
+  <block id="07e4cd8bb717fc56dd8f24955a8f0a97" category="paragraph"><block ref="1f4e0132b734770ea37d56fa1eab8378" prefix="" category="inline-code"></block></block>
+  <block id="2a2202c6cb59da36d2f1144002727949" category="list-text">자동 업데이트 연결 테스트</block>
+  <block id="ef19d0479cab89428496031fdd78325d" category="paragraph"><block ref="c6246d591d6aa8f51360f3fc1fb73099" prefix="" category="inline-code"></block></block>
+  <block id="1691b00c4db1feb3956ab3c4a26a95aa" category="list-text">모든 테스트 실행</block>
+  <block id="896cc7fe61fff04a98ca32ae4ff2f38e" category="paragraph"><block ref="ae6aeb5ef90dc9dd427032fc8f9f6fe3" prefix="" category="inline-code"></block></block>
+  <block id="daad4dadeda8cd86f01c8ad7f2a30465" category="summary">이 문서 사이트의 새로운 소식을 알아보세요.</block>
+  <block id="a8324b80938b67ec782deb0221494038" category="doc">Upgrade Health Checker의 새로운 기능</block>
+  <block id="984ed907e956f5ada3f813bd4a802fd2" category="inline-link-macro">NetApp Console 자동화 허브</block>
+  <block id="28418efc88b69f5e65f0a85f816e9eea" category="paragraph">Upgrade Health Checker의 새로운 기능을 알아보십시오. <block ref="40053797cfb8864b5eaa5f1f6f7991c2" category="inline-link-macro-rx"></block>에서 Upgrade Health Checker 타일로 이동하여 최신 Upgrade Health Checker 다운로드 파일을 확인하면 추가 개선 정보를 찾을 수 있습니다.</block>
+  <block id="70d92c1e2419b7500249e84f56bfda5d" category="section-title">2026년 2월 12일</block>
+  <block id="ae47874d4e80f14ff840114a5af1558e" category="paragraph">Upgrade Health Checker는 성공적인 ONTAP 업그레이드를 완료할 수 있도록 포괄적인 온사이트 보고서를 생성하는 새로운 솔루션을 제공합니다. 기존 자동화 및 오케스트레이션 프레임워크와 함께 사용하여 단일 또는 다중 클러스터를 업그레이드할 때 효율성을 향상시킬 수 있습니다. Upgrade Health Checker는 ONTAP 9.11.1 이상으로의 업그레이드를 지원합니다.</block>
+  <block id="ba6d627457ce6f12fac3776c3f84b9f5" category="inline-link-macro">Upgrade Health Checker에 대해 자세히 알아보십시오</block>
+  <block id="c2da3472d13132f746797e82ab607214" category="paragraph"><block ref="311172ef496e6974c00a808505e30585" category="inline-link-macro-rx"></block>.</block>
+  <block id="6e777a6e34571fc72776d25b82dfacec" category="sidebar">Upgrade Health Checker는 포괄적인 상태 점검을 수행하여 성공적인 ONTAP 업그레이드를 계획하고 실행할 수 있도록 지원합니다.</block>
+  <block id="fd88efe65babf49c3738468cf7693090" category="sidebar">업그레이드 Health Checker 문서</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">시작하기</block>
+  <block id="b90d5d04488d396d7b7e8b456398412c" category="sidebar">업그레이드 상태 점검 도구 설정</block>
+  <block id="e28bd5f4fde7913aca83e892e7ffda0a" category="sidebar">업그레이드 상태 확인 도구 사용</block>
+  <block id="514c14b02caf403ad003cd6f6072c8d1" category="sidebar">보고서 생성 자동화</block>
+  <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">추가 자료</block>
+  <block id="a3c4408acdfc01e2ed1bf7df24ffcfbd" category="sidebar">Upgrade Advisor 문서</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">릴리스 노트</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
+  <block id="6ba8c57dc65e01916d692a44ff09f37a" category="sidebar">업그레이드 상태 검사기의 입력 매개변수</block>
+  <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">FAQ</block>
+</blocks>
