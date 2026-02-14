@@ -25,5 +25,3 @@ indexpage:
       url: upgrade-health-checker-input-parameters.html
     - title: 업그레이드 상태 점검 도구 FAQ
       url: faq.html
-    - title: Upgrade Advisor 문서
-      url: https://docs.netapp.com/us-en/active-iq/upgrade_advisor_overview.html

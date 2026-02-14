@@ -217,7 +217,6 @@
   <block id="a8324b80938b67ec782deb0221494038" category="doc">Upgrade Health Checker의 새로운 기능</block>
   <block id="984ed907e956f5ada3f813bd4a802fd2" category="inline-link-macro">NetApp Console 자동화 허브</block>
   <block id="28418efc88b69f5e65f0a85f816e9eea" category="paragraph">Upgrade Health Checker의 새로운 기능을 알아보십시오. <block ref="40053797cfb8864b5eaa5f1f6f7991c2" category="inline-link-macro-rx"></block>에서 Upgrade Health Checker 타일로 이동하여 최신 Upgrade Health Checker 다운로드 파일을 확인하면 추가 개선 정보를 찾을 수 있습니다.</block>
-  <block id="70d92c1e2419b7500249e84f56bfda5d" category="section-title">2026년 2월 12일</block>
   <block id="ae47874d4e80f14ff840114a5af1558e" category="paragraph">Upgrade Health Checker는 성공적인 ONTAP 업그레이드를 완료할 수 있도록 포괄적인 온사이트 보고서를 생성하는 새로운 솔루션을 제공합니다. 기존 자동화 및 오케스트레이션 프레임워크와 함께 사용하여 단일 또는 다중 클러스터를 업그레이드할 때 효율성을 향상시킬 수 있습니다. Upgrade Health Checker는 ONTAP 9.11.1 이상으로의 업그레이드를 지원합니다.</block>
   <block id="ba6d627457ce6f12fac3776c3f84b9f5" category="inline-link-macro">Upgrade Health Checker에 대해 자세히 알아보십시오</block>
   <block id="c2da3472d13132f746797e82ab607214" category="paragraph"><block ref="311172ef496e6974c00a808505e30585" category="inline-link-macro-rx"></block>.</block>
@@ -228,9 +227,9 @@
   <block id="e28bd5f4fde7913aca83e892e7ffda0a" category="sidebar">업그레이드 상태 확인 도구 사용</block>
   <block id="514c14b02caf403ad003cd6f6072c8d1" category="sidebar">보고서 생성 자동화</block>
   <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">추가 자료</block>
-  <block id="a3c4408acdfc01e2ed1bf7df24ffcfbd" category="sidebar">Upgrade Advisor 문서</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">릴리스 노트</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
   <block id="6ba8c57dc65e01916d692a44ff09f37a" category="sidebar">업그레이드 상태 검사기의 입력 매개변수</block>
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">FAQ</block>
+  <block id="d8f8bff1a4b83b3c4aa6b4284a2e39c2" category="section-title">2026년 2월 13일</block>
 </blocks>
