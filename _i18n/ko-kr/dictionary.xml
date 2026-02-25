@@ -4,7 +4,6 @@
   <block id="851802a6ceccf3253b5814d265b9d85f" category="doc">Upgrade Health Checker를 사용하여 업그레이드 계획 생성 자동화</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
   <block id="bb4632cd1e5a77d2d2a6ad9870b1edf3" category="inline-link-macro">ONTAP 업그레이드 보고서를 생성합니다</block>
-  <block id="cbf0409b66c9c191f2bbf7aebb95c7c6" category="list-text">업그레이드 보고서가 성공적으로 생성되도록 하려면 <block ref="447f94c751f3bc061f73c40c9324c9a3" category="inline-link-macro-rx"></block>에 설명된 필수 설정 단계와 일회성 작업을 모두 완료하십시오.</block>
   <block id="7c3f7cf7c460927ff3a0856e45060529" category="list-text">사용 환경에 맞는 매개 변수를 사용하여 Upgrade Health Checker를 실행하는 스크립트를 생성합니다.</block>
   <block id="4a2fc7904851b98a582cefc5576f3c0b" category="paragraph">다음은 월요일부터 금요일까지 오전 4시에 해당 도구를 실행하는 cronjob의 예입니다. 바이너리 파일과 config.yaml 파일은 /opt/uhc/tool/에 설치되었습니다.</block>
   <block id="af6a390b44e1466e540d2c134316ae89" category="paragraph">Bash 스크립트:</block>
@@ -26,7 +25,6 @@
   <block id="92134baadd628aac9e12056c62e0dc5e" category="paragraph">업그레이드 상태 점검 보고서는 ONTAP 클러스터를 업그레이드하기 전에 해결해야 할 잠재적인 차단 요소 및 경고, 클러스터와 관련된 위험, 그리고 업그레이드할 ONTAP 버전의 새로운 기능 및 개선 사항에 대한 자세한 정보를 제공합니다.</block>
   <block id="a17989ff5f0962c2877477c74338ae61" category="section-title">Upgrade Health Checker는 인터넷 연결 없이 사용할 수 있습니까?</block>
   <block id="3880fea319e437eea669686be6861626" category="paragraph">Upgrade Health Checker를 실행하는 데 인터넷 연결이 필요하지 않습니다. ONTAP 클러스터의 현재 구성 데이터를 사용하여 현장에서 업그레이드 계획 및 보고서를 생성합니다.</block>
-  <block id="a6d52acf3204cc6a87bd7aaed6f3eef7" category="paragraph">단, 자동 도구 업데이트를 위해서는 인터넷 연결이 필요합니다. 인터넷 연결이 불가능한 환경에 있는 경우, NetApp에 문의하여 업그레이드 상태 점검 도구를 최신 상태로 유지하는 방법에 대한 지침을 받으십시오.</block>
   <block id="982d129000c1d3e533f5e8593c670b3d" category="section-title">Upgrade Health Checker는 어떤 ONTAP 버전을 지원합니까?</block>
   <block id="4c8d49c7d71cf0e79e3740d7cf67dd62" category="paragraph">업그레이드 상태 검사기는 ONTAP 9.11.1 이상으로의 업그레이드를 지원합니다.</block>
   <block id="b7c89596c79e950e74638e5d75919aee" category="summary">Upgrade Health Checker를 사용하여 단일 또는 여러 ONTAP 클러스터에 대한 업그레이드 계획을 생성할 수 있습니다.</block>
@@ -232,4 +230,6 @@
   <block id="6ba8c57dc65e01916d692a44ff09f37a" category="sidebar">업그레이드 상태 검사기의 입력 매개변수</block>
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">FAQ</block>
   <block id="d8f8bff1a4b83b3c4aa6b4284a2e39c2" category="section-title">2026년 2월 13일</block>
+  <block id="f245d5b92eabff0d1c1d1e41530987d0" category="list-text">업그레이드 보고서가 성공적으로 생성되도록 하려면 <block ref="6489edbb98d22789fa797cea6950f9bd" category="inline-link-macro-rx"></block>에 설명된 필수 설정 단계와 일회성 작업을 모두 완료하십시오.</block>
+  <block id="4a5a50ece5ac2f055b9ecb1ac0f449f2" category="paragraph">단, 자동 도구 업데이트를 위해서는 인터넷 연결이 필요합니다. 인터넷 연결이 불가능한 환경에서는 <block ref="886a64ecc1d4032be9eb5d1da893e684" category="inline-link-macro-rx"></block>의 Upgrade Health Checker 타일에서 최신 버전의 도구를 수동으로 다운로드할 수 있습니다.</block>
 </blocks>
