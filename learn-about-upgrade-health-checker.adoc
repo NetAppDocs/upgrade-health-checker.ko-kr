@@ -17,4 +17,6 @@ Upgrade Health Checker는 ONTAP 업그레이드를 성공적으로 완료하는 
 
 Upgrade Health Checker는 기존 자동화 및 오케스트레이션 프레임워크에 통합되어 단일 또는 여러 클러스터 업그레이드를 지원합니다. 최신 AutoSupport 데이터를 사용하여 클러스터 관련 위험 요소, 업그레이드할 ONTAP 버전의 새로운 기능 및 개선 사항, ONTAP 업그레이드를 시도하기 전에 수행해야 할 조치에 대한 상세하고 정확한 보고서를 생성합니다.
 
-Upgrade Health Checker에 대한 자세한 내용은 link:faq-upgrade-health-checker.html["업그레이드 상태 점검 도구 FAQ"]를 참조하십시오.
+Upgrade Health Checker에 대해 더 자세히 알아보려면 link:faq-upgrade-health-checker.html["업그레이드 상태 점검 도구 FAQ"]를 참조하거나 다음 소개 영상을 시청하세요.
+
+video::5mwmigXAB9c[youtube]

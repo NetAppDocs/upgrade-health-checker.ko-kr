@@ -41,4 +41,4 @@ Upgrade Health Checker를 실행하는 데 인터넷 연결이 필요하지 않�
 
 == Upgrade Health Checker는 어떤 ONTAP 버전을 지원합니까?
 
-업그레이드 상태 검사기는 ONTAP 9.11.1 이상으로의 업그레이드를 지원합니다.
+업그레이드 상태 검사기는 온프레미스 ONTAP 9.11.1 이상 버전의 업그레이드를 지원합니다.

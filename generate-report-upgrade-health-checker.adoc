@@ -17,6 +17,9 @@ Upgrade Health Checker를 사용하여 단일 또는 여러 ONTAP 클러스터�
 
 또한 여러 클러스터로 구성된 크고 복잡한 환경을 운영하는 경우 최신 업그레이드 계획을 유지 관리하는 데 도움을 받기 위해 link:automate-report-upgrade-health-checker.html["업그레이드 보고서 생성 자동화"]할 수도 있습니다.
 
+.이 작업 정보
+업그레이드 상태 검사기는 온프레미스 ONTAP 버전 9.11.1 이상에 대한 업그레이드를 지원합니다. Cloud Volumes ONTAP를 사용하는 경우 시스템 업그레이드에 대한 자세한 내용은 link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-updating-ontap-cloud.html#supported-upgrade-paths["Cloud Volumes ONTAP 업그레이드"]를 참조하십시오.
+
 .시작하기 전에
 특정 Upgrade Health Checker 매개변수 및 도구가 입력을 수락하는 우선순위 순서에 대한 자세한 내용은 link:upgrade-health-checker-input-parameters.html["Upgrade Health Checker의 입력 매개변수에 대해 알아보십시오"]을 참조하십시오.
 
