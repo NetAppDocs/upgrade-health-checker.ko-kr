@@ -58,13 +58,15 @@ Cron 작업:
 
 NOTE: 프로그램을 실행할 때마다 고유한 실행으로 간주되며, 관련 `runs` 폴더에 모든 관련 데이터, 로그 및 결과가 저장됩니다.
 
-. 보고서 파일(이름은 `uhc_<cluster-name>_<YYYYMMDDHHMMSS>.html`)을 웹 브라우저에서 열어 보고서를 확인하십시오. Upgrade Health Checker를 원격 호스트에서 실행하는 경우 먼저 보고서 파일을 웹 브라우저에서 볼 수 있는 컴퓨터로 다운로드하십시오.
+. 보고서 파일(이름은 `uhc_<cluster-name>_<YYYYMMDDHHMMSS>`)을 웹 브라우저, Microsoft Excel 또는 JSON 뷰어에서 열어 보고서를 확인하십시오. Upgrade Health Checker를 원격 호스트에서 실행하는 경우, 먼저 보고서 파일을 웹 브라우저, Excel 또는 JSON 뷰어에서 보고서를 볼 수 있는 컴퓨터로 다운로드하십시오.
 +
 로그 경로 및 보고서 경로는 다음과 같습니다.
 
 +
 ** 로그 경로: `<output-path>/<unique-run-dir>/<cluster-name>/logs`
-** 보고서 경로: `<output-path>/<unique-run-dir>/<cluster-name>/results/uhc_<cluster-name>_<YYYYMMDDHHMMSS>.html`
+** HTML 보고서 경로: `<output-path>/<unique-run-dir>/<cluster-name>/results/uhc_<cluster-name>_<YYYYMMDDHHMMSS>.html`
+** Excel 보고서 경로: `<output-path>/<unique-run-dir>/<cluster-name>/results/uhc_<cluster-name>_<YYYYMMDDHHMMSS>.xlsx`
+** JSON 보고서 경로: `<output-path>/<unique-run-dir>/<cluster-name>/results/uhc_<cluster-name>_<YYYYMMDDHHMMSS>.json`
 
 
 
