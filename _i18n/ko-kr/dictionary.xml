@@ -248,4 +248,5 @@
   <block id="b729a38666412b046926504f8c6e0c22" category="list-text">UHC는 이제 HTML(사람이 읽을 수 있음) 및 JSON(기계가 읽을 수 있음) 형식을 보완하는 새로운 보고서 형식(.XLSX - 사람이 편집 가능)을 제공합니다.</block>
   <block id="28644c8986780297cc12f67e6e53c6e9" category="paragraph"><block ref="6489edbb98d22789fa797cea6950f9bd" category="inline-link-macro-rx"></block>.</block>
   <block id="188972059fe3b72a4a06d5b2f9a9f5e8" category="paragraph"><block ref="2351634b2585980a03146a4b76c86b91" category="inline-link-macro-rx"></block>.</block>
+  <block id="14bcc4201c40840cb4def541b49a3f32" category="sidebar">NetApp Lab on Demand를 사용하여 Upgrade Health Checker 시작하기</block>
 </blocks>
