@@ -74,8 +74,6 @@
   <block id="55dcd8cbc9d164986479594db66fd89e" category="paragraph">다음 사양으로 Upgrade Health Checker용 가상 머신을 설정하십시오.</block>
   <block id="cf0860ffd4dc1929d768f74d92735b75" category="list-text">처리 및 메모리: m5.large VM 또는 2개의 vCPU 및 8GiB RAM이 있는 동등한 제품.</block>
   <block id="28a03eb4af7c5f6abf99620ada6c6cfb" category="list-text">Storage: 가상 머신이 손상될 경우 데이터 보존을 위해 최소 100GB의 루트 볼륨과 최소 100GB의 추가 NFS 볼륨을 제공하십시오.</block>
-  <block id="072b499eacb5befcbdab2d6cc0fe02a0" category="list-text"><block ref="072b499eacb5befcbdab2d6cc0fe02a0" category="inline-link-rx"></block></block>
-  <block id="53fb0fc7c544c164b74ed43fbccd4384" category="list-text"><block ref="53fb0fc7c544c164b74ed43fbccd4384" category="inline-link-rx"></block></block>
   <block id="907609b93268ffb2d43f03dae5c950a3" category="paragraph">인터넷 접속이 불가능한 경우 NetApp에 문의하여 안내를 받으십시오.</block>
   <block id="ad9d14ce6f324c6a7d87f50e2b156ad7" category="list-text">권장 패키지: 액세스를 용이하게 하기 위해 웹 서버를 설치하십시오.</block>
   <block id="513157ecd257a5ac15a2bf664400f97e" category="inline-link-macro">NetApp Console 자동화 허브로 이동</block>
@@ -235,18 +233,20 @@
   <block id="e1b8614301d7bec3825b94f88f799128" category="list-text">HTML 보고서 경로:<block ref="42dfa52dc698f1548746e65dadae2dba" prefix=" " category="inline-code"></block></block>
   <block id="38fda984a0c5a847814d8f79ebf27b47" category="list-text">Excel 보고서 경로:<block ref="b579a006aab9674bb4b5ee8bdc1dc5a8" prefix=" " category="inline-code"></block></block>
   <block id="82e19305023b5eb3613e715db77f833c" category="list-text">JSON 보고서 경로:<block ref="fa32c5a3f7d651976fb4d5ab4d04b0b0" prefix=" " category="inline-code"></block></block>
-  <block id="6dd1c9daa4dc12fc30a473b455c79963" category="list-text">HTTPS를 통한 원격 측정 엔드포인트(<block ref="dff1129755a63688cdc5de28dfe608ad" category="inline-link-rx"></block> 및 <block ref="b6e65db6bdd125b2fca849ddf715a294" category="inline-link-rx"></block>) 연결</block>
-  <block id="2337a5c21840ff98faafc2454e42e258" category="list-text">HTTPS(443)를 통한 자동 업데이트 엔드포인트(<block ref="7b0c3a92f481d16df4dd5efff5f61700" category="inline-link-rx"></block>, <block ref="75a282c90668bc1468d683bacd2cabd2" category="inline-link-rx"></block> 및 <block ref="b6e65db6bdd125b2fca849ddf715a294" category="inline-link-rx"></block>)에 대한 연결</block>
   <block id="c9222608750e8dc2e14567da95cc5574" category="list-text">웹 브라우저, Microsoft Excel 또는 JSON 뷰어에서 보고서 파일(이름은<block ref="781e82a34e84af3b11fccec6b813c654" prefix=" " category="inline-code"></block>)을 열어 보고서를 확인하십시오. 원격 호스트에서 실행하는 경우 먼저 보고서 파일을 웹 브라우저, Excel 또는 JSON 뷰어에서 보고서를 볼 수 있는 컴퓨터로 다운로드하십시오.</block>
   <block id="23f77c02d4b9cce31928ac38c3a2b6f9" category="list-text">호스팅 요구 사항: 자동 도구 업데이트를 위해 클러스터 연결 및 인터넷 액세스가 가능한 위치에 VM을 배치하십시오. 자동 업데이트를 수행하려면 해당 머신이 HTTPS(443)를 통해 다음 엔드포인트에 액세스할 수 있어야 합니다.</block>
-  <block id="1e149c7d9ce6dc9e42acefe98045ece8" category="list-text"><block ref="1e149c7d9ce6dc9e42acefe98045ece8" category="inline-link-rx"></block></block>
-  <block id="d100bb5092fa91acd1332279f9e39144" category="paragraph">또한 가상 머신이 HTTPS를 통해 텔레메트리 엔드포인트<block ref="dff1129755a63688cdc5de28dfe608ad" category="inline-link-rx"></block> 및<block ref="b6e65db6bdd125b2fca849ddf715a294" category="inline-link-rx"></block>에 연결할 수 있는지 확인하여 NetApp이 업그레이드 계획에 대한 AutoSupport 정보를 수신할 수 있도록 하십시오.</block>
   <block id="ef442759af12bb34136648bc4519a80c" category="section-title">2026년 4월 15일</block>
   <block id="46f2cb9a84a7af28bc6cd48700cc9900" category="paragraph">Upgrade Health Checker 문서의 이번 업데이트에는 다음과 같은 기능이 포함되어 있습니다.</block>
-  <block id="ad88b0b80ee104829693617a9bf958bd" category="list-text">UHC가 자동 업데이트 기능을 작동시키려면 새로운 엔드포인트<block ref="7284fbd648a23f7bd89ffe1d29d304e6" category="inline-link-rx"></block>에 대한 접근 권한이 필요합니다.</block>
   <block id="e1a2132b8b37788de7f02a2417b9fb84" category="paragraph"><block ref="818545cfdb8752d4fd7459b5cbb30ef7" category="inline-link-macro-rx"></block>.</block>
   <block id="b729a38666412b046926504f8c6e0c22" category="list-text">UHC는 이제 HTML(사람이 읽을 수 있음) 및 JSON(기계가 읽을 수 있음) 형식을 보완하는 새로운 보고서 형식(.XLSX - 사람이 편집 가능)을 제공합니다.</block>
   <block id="28644c8986780297cc12f67e6e53c6e9" category="paragraph"><block ref="6489edbb98d22789fa797cea6950f9bd" category="inline-link-macro-rx"></block>.</block>
   <block id="188972059fe3b72a4a06d5b2f9a9f5e8" category="paragraph"><block ref="2351634b2585980a03146a4b76c86b91" category="inline-link-macro-rx"></block>.</block>
   <block id="14bcc4201c40840cb4def541b49a3f32" category="sidebar">NetApp Lab on Demand를 사용하여 Upgrade Health Checker 시작하기</block>
+  <block id="9878135fc061d82ca23d024a73b70f17" category="list-text">HTTPS를 통한 원격 측정 엔드포인트(+https://support.netapp.com/+ 및 +https://api.activeiq.netapp.com+) 연결</block>
+  <block id="8e902ec9dc6816d99e16bdee4a2eed46" category="list-text">HTTPS(443)를 통한 자동 업데이트 엔드포인트(+https://api.uhc.netapp.com+, +https://gql.aiq.netapp.com+, +https://api.activeiq.netapp.com+)에 대한 연결</block>
+  <block id="6004dfc86627bd24fdacdda35ddd16c3" category="list-text">+https://api.uhc.netapp.com+</block>
+  <block id="375ac624794a2a89bd6c16e9b07a6656" category="list-text">+https://gql.aiq.netapp.com+</block>
+  <block id="0cf9833b48d6a8ca87c343c5a45e4e84" category="list-text">+https://api.activeiq.netapp.com+</block>
+  <block id="527e62c9953c2bebba6b642861ac2fd8" category="paragraph">또한 가상 머신이 HTTPS를 통해 텔레메트리 엔드포인트(+https://support.netapp.com+ 및 +https://api.activeiq.netapp.com+)에 연결할 수 있는지 확인하여 NetApp이 업그레이드 계획에 대한 AutoSupport 정보를 수신할 수 있도록 하십시오.</block>
+  <block id="7da7d55bf35c61004edeb6d3b68a9970" category="list-text">UHC가 자동 업데이트 기능을 작동시키려면 새로운 엔드포인트(+https://api.activeiq.netapp.com+)에 대한 액세스 권한이 필요합니다.</block>
 </blocks>

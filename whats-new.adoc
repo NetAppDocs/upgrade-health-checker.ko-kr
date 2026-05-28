@@ -21,7 +21,7 @@ Upgrade Health Checker의 새로운 기능을 알아보십시오. link:https://c
 
 Upgrade Health Checker 문서의 이번 업데이트에는 다음과 같은 기능이 포함되어 있습니다.
 
-* UHC가 자동 업데이트 기능을 작동시키려면 새로운 엔드포인트(https://api.activeiq.netapp.com[]에 대한 접근 권한이 필요합니다.
+* UHC가 자동 업데이트 기능을 작동시키려면 새로운 엔드포인트(+https://api.activeiq.netapp.com+)에 대한 액세스 권한이 필요합니다.
 +
 link:set-up-upgrade-health-checker.html["Upgrade Health Checker를 다운로드하고 설정합니다"].
 

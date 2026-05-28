@@ -45,8 +45,8 @@ NOTE: Upgrade Health Checker는 독립 실행형 패키지이므로 실행하기
 
 +
 ** HTTPS를 통한 ONTAP 클러스터 IP 주소 연결
-** HTTPS를 통한 원격 측정 엔드포인트((https://support.netapp.com/[] 및  https://api.activeiq.netapp.com[]) 연결
-** HTTPS(443)를 통한 자동 업데이트 엔드포인트((https://api.uhc.netapp.com[],  https://gql.aiq.netapp.com[] 및  https://api.activeiq.netapp.com[])에 대한 연결
+** HTTPS를 통한 원격 측정 엔드포인트(+https://support.netapp.com/+ 및 +https://api.activeiq.netapp.com+) 연결
+** HTTPS(443)를 통한 자동 업데이트 엔드포인트(+https://api.uhc.netapp.com+, +https://gql.aiq.netapp.com+, +https://api.activeiq.netapp.com+)에 대한 연결
 ** 최소 4GB의 여유 `/tmp` 공간
 
 
