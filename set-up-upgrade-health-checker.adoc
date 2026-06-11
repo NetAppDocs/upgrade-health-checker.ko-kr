@@ -21,32 +21,49 @@ Upgrade Health Checker를 다운로드하여 최신 버전의 ONTAP로 업그레
 .시작하기 전에
 다음 사양으로 Upgrade Health Checker용 가상 머신을 설정하십시오.
 
-* 처리 및 메모리: m5.large VM 또는 2개의 vCPU 및 8GiB RAM이 있는 동등한 제품.
-* 권장 운영 체제: 최적의 호환성을 위해 glibc 라이브러리 버전 2.28 이상이 설치된 모든 Linux OS. 다음이 포함됩니다:
-+
-** Ubuntu 22.04
-** RHEL8
-** RHEL9
+|===
+| 구성 요소 | 사양 
 
 
-* Storage: 가상 머신이 손상될 경우 데이터 보존을 위해 최소 100GB의 루트 볼륨과 최소 100GB의 추가 NFS 볼륨을 제공하십시오.
-* 호스팅 요구 사항: 자동 도구 업데이트를 위해 클러스터 연결 및 인터넷 액세스가 가능한 위치에 VM을 배치하십시오. 자동 업데이트를 수행하려면 해당 머신이 HTTPS(443)를 통해 다음 엔드포인트에 액세스할 수 있어야 합니다.
-+
-** +https://api.uhc.netapp.com+
-** +https://gql.aiq.netapp.com+
-** +https://api.activeiq.netapp.com+
-+
-인터넷 접속이 불가능한 경우 NetApp에 문의하여 안내를 받으십시오.
+ a| 
+*VM*
+| 2개의 vCPU와 8GiB RAM을 갖춘 m5.large VM 또는 이와 동등한 사양 
 
 
+ a| 
+*운영 체제*
+| glibc 라이브러리 버전 2.28 이상이 설치된 모든 Linux 운영 체제(Ubuntu 22.04, RHEL8 또는 RHEL9) 
 
-* 권장 패키지: 액세스를 용이하게 하기 위해 웹 서버를 설치하십시오.
+
+ a| 
+*디스크 공간*
+| 최소 4GB(8GB 권장)의 여유 공간 `/tmp` 및 실행 권한 
 
 
-또한 가상 머신이 HTTPS를 통해 텔레메트리 엔드포인트(+https://support.netapp.com+ 및 +https://api.activeiq.netapp.com+)에 연결할 수 있는지 확인하여 NetApp이 업그레이드 계획에 대한 AutoSupport 정보를 수신할 수 있도록 하십시오.
+ a| 
+*네트워크*
+| ONTAP 클러스터 관리 LIF에 대한 HTTPS 연결 
+
+
+ a| 
+*ONTAP 버전*
+| ONTAP 9.11.1 이상을 실행하는 클러스터 
+
+
+ a| 
+*호스팅 요구 사항*
+| 자동 도구 업데이트를 위해 VM을 클러스터 연결 및 인터넷 액세스가 가능한 위치에 배치하십시오. 자동 업데이트를 수행하고 NetApp이 업그레이드 계획에 대한 AutoSupport 정보를 수신할 수 있도록 VM은 HTTPS(443)를 통해 다음 엔드포인트에 액세스할 수 있어야 합니다.https://support.netapp.com/[] https://api.uhc.netapp.com[] https://gql.aiq.netapp.com[] https://api.activeiq.netapp.com[] 
+
+
+ a| 
+*권장 패키지*
+| 액세스를 용이하게 하기 위해 웹 서버를 설치하십시오 
+|===
+
+NOTE: 가상 머신이 HTTPS(443)를 통해 자동 업데이트 및 원격 측정 엔드포인트((https://support.netapp.com/[] 및  https://api.activeiq.netapp.com[])에 연결할 수 있는지 확인하여 NetApp이 업그레이드 계획에 대한 AutoSupport 정보를 수신할 수 있도록 하십시오. 인터넷에 액세스할 수 없는 경우 업그레이드 상태 검사기의 최신 버전을 수동으로 다운로드해야 합니다.
 
 .단계
-. link:https://console.netapp.com/automationHub["NetApp Console 자동화 허브로 이동"]업그레이드 상태 점검 도구 타일을 찾아 업그레이드 상태 점검 도구 바이너리를 다운로드하십시오.
+. link:https://console.netapp.com/automationHub["NetApp Console 자동화 허브"^]로 이동하여 Upgrade Health Checker 타일을 찾아 Upgrade Health Checker 바이너리를 다운로드하십시오.
 . Upgrade Health Checker 가상 머신을 설정하고 SSH를 사용하여 원하는 위치에 바이너리를 배치하십시오.
 . Upgrade Health Checker의 디지털 서명을 확인하십시오.
 +
@@ -85,7 +102,7 @@ openssl dgst -sha256 -verify UHC-Linux-public.pub -signature uhc.sig uhc
 NOTE: Ansible 플레이북을 작성하여 모든 ONTAP 클러스터에 역할과 사용자를 자동으로 배포할 수 있습니다.
 
 +
-http 애플리케이션용 서비스 계정을 생성해야 합니다. 다음 CLI 명령을 사용하여 필요한 권한을 구성하십시오.
+HTTP 애플리케이션용 서비스 계정을 생성해야 합니다. 다음 CLI 명령을 사용하여 필요한 권한을 구성하십시오:
 
 +
 [source, cli]
@@ -156,6 +173,10 @@ conjur_password: "{{ lookup('cyberark.conjur.conjur_variable', 'prodvault/devops
 ----
 
 
+
+
+.관련 정보
+* link:upgrade-health-checker-input-parameters.html["Upgrade Health Checker의 입력 매개변수에 대해 알아보십시오"]
 
 
 .다음 단계

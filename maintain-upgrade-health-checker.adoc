@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: maintain-upgrade-health-checker.html 
+keywords: upgrade, health, checker, maintain, maintenance tasks, 
+summary: 업그레이드 상태 점검 도구의 유지 관리 작업입니다. 
+---
+= 업그레이드 상태 검사기 유지 관리
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+업그레이드 상태 검사기를 유지 관리하려면 정기적으로 업데이트를 확인하고, 로그를 모니터링하여 반복되는 문제가 있는지 확인하고, 도구가 사용 환경에 맞게 올바르게 구성되었는지 확인하십시오. 이렇게 하면 도구가 안정적이고 효율적으로 실행됩니다. 새로운 문제가 발생하거나 추가 지원이 필요한 경우 NetApp 지원 자료를 참조하거나 NetApp 지원팀에 문의하십시오.
+
+
+
+== /tmp 공간 관리
+
+Upgrade Health Checker는 실행 중에 구성 요소를  `/tmp` 디렉터리에 추출합니다.  `/tmp`의 공간 부족과 관련된 문제가 발생하는 경우 다음 사항을 고려하십시오.
+
+*  `/tmp`에서 사용 가능한 공간을 확인하여 도구가 효과적으로 작동할 수 있도록 최소 4GB의 여유 공간이 있는지 확인하십시오.
+*  `/tmp`에서 불필요한 파일을 제거하여 공간을 확보하십시오.
+
+
+
+
+== 디렉토리 정리 실행
+
+Upgrade Health Checker는 실행할 때마다 로그와 결과를 저장하는 고유한 실행 디렉터리를 생성합니다. 디스크 공간을 관리하려면 예를 들어 30일과 같이 특정 기간이 지난 후 오래된 실행 디렉터리를 제거하는 자동 정리 프로세스를 구성하십시오.
+
+[listing]
+----
+# Delete UHC data older than 30 days (recommended for automated workflows)
+find /mnt/nfs/uhc/runs -type d -mtime +30 -exec rm -rf {} + 2>/dev/null
+
+# Schedule as a weekly cron job
+0 3 * * 0 find /mnt/nfs/uhc/runs -type d -mtime +30 -exec rm -rf {} + 2>/dev/null
+----
+
+
+== 자동 업데이트
+
+Upgrade Health Checker는 인터넷 연결이 가능한 경우 실행 후 자동으로 업데이트를 확인합니다. 이를 통해 최신 기능, 개선 사항 및 버그 수정 사항을 사용할 수 있습니다. 인터넷에 접속할 수 없는 경우 link:https://console.netapp.com/automationHub["NetApp Console 자동화 허브"^]에서 최신 버전을 수동으로 다운로드할 수 있습니다.
+
+자동 업데이트를 비활성화하려면 다음 내용을  `config.yaml` 파일에 추가하세요.
+
+[listing]
+----
+AUTO_UPDATE:
+  ENABLED: false
+----

@@ -300,6 +300,29 @@ CLUSTER:
 ====
 
 
+=== 대시보드
+
+ `--dashboard` 매개변수는 클러스터에 연결하지 않고 `<runs>/dashboard/index.html`의 기존 실행에서 대시보드를 재생성합니다. 일반 실행 외부에서 플릿 보기를 새로 고치는 데 사용합니다. 대시보드는 최근 평가된 모든 클러스터의 상태에 대한 개괄적인 개요를 제공하므로 한 곳에서 여러 클러스터의 업그레이드 준비 상태를 쉽게 모니터링하고 비교할 수 있습니다. 웹 브라우저에서 대시보드를 열어 각 클러스터의 상태, 잠재적 차단 요소 및 위험을 한눈에 확인할 수 있습니다.
+
+* CLI 인수: `--dashboard`
+
+
+.예
+[%collapsible]
+====
+* CLI 인수:
++
+[listing]
+----
+./uhc --dashboard
+./uhc --dashboard --runs-path /custom/output
+./uhc --dashboard --config-path /path/to/custom_config.yaml
+----
+
+
+====
+
+
 === 원격 측정을 비활성화합니다
 
 원격 측정 기능을 비활성화하려면 다음 내용을  `config.yaml` 파일에 추가하세요.

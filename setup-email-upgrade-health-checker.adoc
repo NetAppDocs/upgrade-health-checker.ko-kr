@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: setup-email-upgrade-health-checker.html 
+keywords: upgrade, health, checker 
+summary: Upgrade Health Checker 보고서를 수신하도록 이메일을 설정할 수 있습니다. 
+---
+= 이메일로 업그레이드 상태 점검 보고서 받기
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Upgrade Health Checker에 이메일을 통합하여 받은 편지함으로 보고서를 수신할 수 있습니다. config.yaml 파일 또는 명령줄 인수를 통해 이 기능을 활성화합니다. 활성화되면 Upgrade Health Checker는 생성된 보고서(HTML, Excel 또는 JSON)를 SMTP 서버를 사용하여 구성된 하나 이상의 수신자에게 전송합니다. 이 기능이 비활성화되면 보고서가 전송되지 않습니다. 보고서 생성이 실패하고 이메일이 활성화된 경우 로그 파일이 구성된 수신자에게 전송됩니다.
+
+
+
+== config.yaml 파일을 사용하여 구성합니다
+
+. config.yaml 파일에서 이메일 보고서를 활성화합니다.
++
+[listing]
+----
+# Email Report Configuration
+EMAIL:
+  ENABLED: true
+----
+. 발신자 세부 정보 및 제목과 함께 SMTP 구성 설정을 제공합니다.
++
+[listing]
+----
+# SMTP Server Configuration
+EMAIL:
+  ENABLED: true
+  FROM: "uhc-notify@example.com"
+  SUBJECT: "UHC Upgrade Health Report"
+  REPLY_TO: <email>
+  SMTP:
+    HOST: "smtp.example.com"
+    PORT: [<port-number>]
+----
+. 수신자 이메일 주소를 제공하고 이메일로 전송할 보고서 형식(예: HTML, EXCEL, JSON, ALL)을 구성하십시오.
++
+[listing]
+----
+# Recipient Email Addresses, report formats
+EMAIL:
+  ENABLED: true
+  TO: <recipient>
+  FROM: "uhc-notify@example.com"
+  SUBJECT: "UHC Upgrade Health Report"
+  REPLY_TO: <email>
+  RECIPIENTS: "user1@example.com, user2@example.com"
+  REPORT_FORMATS: "HTML,EXCEL,JSON"   # valid values: HTML, EXCEL, JSON or ALL
+  SMTP:
+    HOST: "smtp.example.com"
+    PORT: [PORT]
+----
+
+
+
+
+== 명령줄 인수를 사용하여 구성합니다
+
+. 명령줄 인수를 사용하여 이메일 보고서를 활성화합니다.
++
+[listing]
+----
+./uhc --email-enabled=true
+----
+. 수신자 이메일 주소를 제공하세요:
++
+[listing]
+----
+./uhc --email-recipients="user1@example.com, user2@example.com"
+----
+. 이메일로 전송할 보고서 형식(예: HTML, EXCEL, JSON)을 구성하십시오.
++
+[listing]
+----
+./uhc --email-report-formats=HTML,EXCEL,JSON
+----
+
+
+[NOTE]
+====
+다음 세 가지 속성은 명령줄 인수와 config.yaml 파일을 모두 사용하여 구성할 수 있으며, 나머지 속성은 config.yaml 파일에서만 구성할 수 있습니다.
+
+* 이메일 활성화됨
+* 이메일 수신자
+* 이메일 보고서 형식
+
+
+명령줄 인수가 제공되는 경우, 해당 인수가 config.yaml 파일의 값을 재정의한다는 점에 유의하십시오.
+
+예를 들면 다음과 같습니다.
+
+[listing]
+----
+./uhc \
+  --email-enabled=true
+  --email-recipients="user1@example.com, user2@example.com" \
+  --email-report-formats=HTML,EXCEL,JSON \
+----
+[listing]
+----
+EMAIL:
+  FROM: "uhc-notify@example.com"
+  SUBJECT: "UHC Upgrade Health Report"
+  REPLY_TO: <email>
+  SMTP:
+    HOST: "smtp.example.com"
+    PORT: [PORT]
+----
+====

@@ -13,6 +13,8 @@ indexpage:
       url: learn-about-upgrade-health-checker.html
     - title: 업그레이드 상태 점검 도구 설정
       url: set-up-upgrade-health-checker.html
+    - title: Upgrade Health Checker의 입력 매개변수에 대해 알아보십시오
+      url: upgrade-health-checker-input-parameters.html
   - title: 업그레이드 상태 확인 도구 사용
     links:
     - title: ONTAP 업그레이드 보고서를 생성합니다
@@ -21,9 +23,11 @@ indexpage:
       url: automate-report-upgrade-health-checker.html
   - title: 추가 자료
     links:
-    - title: Upgrade Health Checker의 입력 매개변수에 대해 알아보십시오
-      url: upgrade-health-checker-input-parameters.html
     - title: NetApp Lab on Demand를 사용하여 Upgrade Health Checker 시작하기
       url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/Getting-Started-with-Upgrade-Health-Checker-Using-NetApp-Lab-on-Demand/ba-p/466818
+    - title: 업그레이드 상태 검사기 유지 관리
+      url: maintain-upgrade-health-checker.html
+    - title: 업그레이드 상태 점검 도구 문제 해결
+      url: troubleshoot-upgrade-health-checker.html
     - title: 업그레이드 상태 점검 도구 FAQ
       url: faq-upgrade-health-checker.html
