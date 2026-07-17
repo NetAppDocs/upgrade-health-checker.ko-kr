@@ -13,11 +13,14 @@ summary: Upgrade Health Checker 보고서를 수신하도록 이메일을 설정
 
 
 [role="lead"]
-Upgrade Health Checker에 이메일을 통합하여 받은 편지함으로 보고서를 수신할 수 있습니다. config.yaml 파일 또는 명령줄 인수를 통해 이 기능을 활성화합니다. 활성화되면 Upgrade Health Checker는 생성된 보고서(HTML, Excel 또는 JSON)를 SMTP 서버를 사용하여 구성된 하나 이상의 수신자에게 전송합니다. 이 기능이 비활성화되면 보고서가 전송되지 않습니다. 보고서 생성이 실패하고 이메일이 활성화된 경우 로그 파일이 구성된 수신자에게 전송됩니다.
+Upgrade Health Checker는 보고서를 받은 편지함으로 직접 이메일로 전송할 수 있습니다. 이 기능은 config.yaml 파일 또는 명령줄 인수를 통해 활성화할 수 있습니다. 활성화하면 Upgrade Health Checker는 생성된 보고서(HTML, Excel 또는 JSON 형식)를 SMTP 서버를 통해 하나 이상의 수신자에게 전송합니다. 비활성화하면 보고서가 전송되지 않습니다. 보고서 생성에 실패하고 이메일 전송이 활성화된 경우, Upgrade Health Checker는 로그 파일을 구성된 수신자에게 이메일로 전송합니다.
 
 
 
+[[configure-using-the-config-yaml-file]]
 == config.yaml 파일을 사용하여 구성합니다
+
+config.yaml 파일에서 이메일 보고서를 활성화하고, SMTP 서버 세부 정보를 추가하고, 수신자 주소와 보고서 형식을 지정하여 이메일 설정을 구성할 수 있습니다.
 
 . config.yaml 파일에서 이메일 보고서를 활성화합니다.
 +
@@ -27,7 +30,7 @@ Upgrade Health Checker에 이메일을 통합하여 받은 편지함으로 보�
 EMAIL:
   ENABLED: true
 ----
-. 발신자 세부 정보 및 제목과 함께 SMTP 구성 설정을 제공합니다.
+. SMTP 구성 설정, 발신자 정보 및 제목을 추가합니다.
 +
 [listing]
 ----
@@ -41,7 +44,7 @@ EMAIL:
     HOST: "smtp.example.com"
     PORT: [<port-number>]
 ----
-. 수신자 이메일 주소를 제공하고 이메일로 전송할 보고서 형식(예: HTML, EXCEL, JSON, ALL)을 구성하십시오.
+. 수신자 이메일 주소를 추가하고 시스템에서 이메일로 전송할 보고서 형식(예: HTML, EXCEL, JSON 또는 ALL)을 설정하세요. 인증 및 암호화를 사용할 수도 있습니다.
 +
 [listing]
 ----
@@ -57,12 +60,20 @@ EMAIL:
   SMTP:
     HOST: "smtp.example.com"
     PORT: [PORT]
+    USE_SMTP_AUTH: true
+    USE_TLS: true
+    USE_SSL: true
+    USERNAME: "user@example.com"
+    PASSWORD: "********"
 ----
 
 
 
 
+[[configure-using-command-line-arguments]]
 == 명령줄 인수를 사용하여 구성합니다
+
+명령줄 인수를 사용하여 보고서 활성화, 수신자 지정 및 보고서 형식 선택과 같은 기본 이메일 설정을 구성할 수 있습니다.
 
 . 명령줄 인수를 사용하여 이메일 보고서를 활성화합니다.
 +
@@ -86,14 +97,14 @@ EMAIL:
 
 [NOTE]
 ====
-다음 세 가지 속성은 명령줄 인수와 config.yaml 파일을 모두 사용하여 구성할 수 있으며, 나머지 속성은 config.yaml 파일에서만 구성할 수 있습니다.
+다음 세 가지 속성은 명령줄 인수 또는 config.yaml 파일을 사용하여 구성할 수 있습니다. 나머지 모든 속성은 config.yaml 파일에서만 구성할 수 있습니다.
 
 * 이메일 활성화됨
 * 이메일 수신자
 * 이메일 보고서 형식
 
 
-명령줄 인수가 제공되는 경우, 해당 인수가 config.yaml 파일의 값을 재정의한다는 점에 유의하십시오.
+명령줄 인수는 config.yaml 파일의 값을 재정의한다는 점에 유의하십시오.
 
 예를 들면 다음과 같습니다.
 

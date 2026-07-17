@@ -17,6 +17,7 @@ Upgrade Health Checker의 입력 매개변수와 CLI 인수, 구성 파일 또�
 
 
 
+[[input-methods-priority]]
 == 입력 방법 우선순위
 
 업그레이드 상태 점검 도구는 모든 매개 변수에 대해 여러 입력 옵션을 제공합니다. 입력을 수락하는 우선 순위는 다음과 같습니다.
@@ -30,10 +31,12 @@ Upgrade Health Checker의 입력 매개변수와 CLI 인수, 구성 파일 또�
 
 
 
+[[input-parameters]]
 == 입력 매개변수
 
 
 
+[[cluster-ip]]
 === 클러스터 IP
 
  `--cluster-ip` 매개변수는 연결할 ONTAP 클러스터의 IP 주소 또는 호스트 이름을 지정합니다.
@@ -68,6 +71,7 @@ CLUSTER:
 ====
 
 
+[[cluster-username]]
 === 클러스터 사용자 이름
 
  `--cluster-username` 매개변수는 ONTAP 클러스터 인증에 사용할 사용자 이름을 지정합니다.
@@ -102,6 +106,7 @@ CLUSTER:
 ====
 
 
+[[cluster-password]]
 === 클러스터 암호
 
  `--cluster-password` 매개변수는 ONTAP 클러스터 인증에 사용할 암호를 지정합니다.
@@ -136,6 +141,7 @@ CLUSTER:
 ====
 
 
+[[target-ontap-version]]
 === 타겟 ONTAP 버전
 
  `--target-ontap-version` 매개변수는 분석을 위해 업그레이드할 ONTAP 버전을 지정합니다. 기존 클러스터 ONTAP 버전을 유지하려면 "current"를 사용합니다.
@@ -173,6 +179,7 @@ CLUSTER:
 ====
 
 
+[[accept-eula]]
 === EULA에 동의합니다
 
  `--accept-eula` 매개변수는 최종 사용자 라이선스 계약을 수락할지 여부를 지정합니다. 계속하려면  `true`로 설정해야 합니다.
@@ -207,6 +214,7 @@ CLUSTER:
 ====
 
 
+[[configuration-file-path]]
 === 구성 파일 경로
 
  `--config-path` 매개변수는 사용자 지정 구성 YAML 파일의 경로를 지정합니다.
@@ -233,6 +241,7 @@ CLUSTER:
 ====
 
 
+[[run-output-path]]
 === 실행 출력 경로
 
  `--runs-path` 매개변수는 실행 출력 및 보고서를 저장하기 위한 사용자 지정 디렉터리를 지정합니다.
@@ -267,6 +276,7 @@ APP:
 ====
 
 
+[[skip-compatibility-check]]
 === 호환성 검사 건너뛰기
 
  `--skip-compatibility-check` 매개변수는 하드웨어 호환성 검사를 건너뛰고 업그레이드하려는 지정된 ONTAP 버전을 사용합니다.
@@ -300,6 +310,7 @@ CLUSTER:
 ====
 
 
+[[dashboard]]
 === 대시보드
 
  `--dashboard` 매개변수는 클러스터에 연결하지 않고 `<runs>/dashboard/index.html`의 기존 실행에서 대시보드를 재생성합니다. 일반 실행 외부에서 플릿 보기를 새로 고치는 데 사용합니다. 대시보드는 최근 평가된 모든 클러스터의 상태에 대한 개괄적인 개요를 제공하므로 한 곳에서 여러 클러스터의 업그레이드 준비 상태를 쉽게 모니터링하고 비교할 수 있습니다. 웹 브라우저에서 대시보드를 열어 각 클러스터의 상태, 잠재적 차단 요소 및 위험을 한눈에 확인할 수 있습니다.
@@ -323,6 +334,7 @@ CLUSTER:
 ====
 
 
+[[disable-telemetry]]
 === 원격 측정을 비활성화합니다
 
 원격 측정 기능을 비활성화하려면 다음 내용을  `config.yaml` 파일에 추가하세요.
@@ -334,6 +346,7 @@ TELEMETRY:
 ----
 
 
+[[disable-automatic-updates]]
 === 자동 업데이트 비활성화
 
 업그레이드 상태 검사기의 자동 업데이트를 비활성화하려면 다음 내용을  `config.yaml` 파일에 추가하십시오.
@@ -345,10 +358,12 @@ AUTO_UPDATE:
 ----
 
 
+[[examples-using-each-input-method]]
 == 각 입력 방법을 사용하는 예
 
 
 
+[[combined-cli-arguments]]
 === 결합된 CLI 인수
 
 [listing]
@@ -365,6 +380,7 @@ AUTO_UPDATE:
 ----
 
 
+[[config-yaml-file]]
 === Config.yaml 파일
 
 [listing]
@@ -382,6 +398,7 @@ APP:
 ----
 
 
+[[interactive-mode]]
 === 대화형 모드
 
 필수 입력 매개변수를 대화형으로 표시하려면 인수 없이 Upgrade Health Checker를 실행하십시오.
@@ -392,6 +409,7 @@ APP:
 ----
 
 
+[[additional-commands]]
 == 추가 명령
 
 이러한 명령은 도구의 전체 실행 외에 몇 가지 추가 기능을 제공합니다.

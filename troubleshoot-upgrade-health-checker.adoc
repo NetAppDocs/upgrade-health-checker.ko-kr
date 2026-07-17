@@ -17,12 +17,14 @@ summary: '업그레이드 상태 점검 문제 해결: ONTAP 업그레이드 시
 
 
 
+[[troubleshoot-issues]]
 == 문제 해결
 
 {empty} + {empty}
 
 
 
+[[issue-authentication-or-credential-errors]]
 === 문제: 인증 또는 자격 증명 오류
 
 *증상:*
@@ -50,6 +52,7 @@ Missing cluster credentials
 
 
 
+[[issue-auto-update-fails]]
 === 문제: 자동 업데이트 실패
 
 *증상:*
@@ -81,6 +84,7 @@ df -h <location of uhc>
 
 
 
+[[issue-binary-takes-a-long-time-to-start]]
 === 문제: 바이너리를 시작하는 데 시간이 오래 걸립니다
 
 *원인:* 바이너리는 자체 포함되어 있으며 실행 전에 압축을 풀어야 합니다.
@@ -89,6 +93,7 @@ df -h <location of uhc>
 
 
 
+[[issue-permission-denied-or-cannot-execute-binary-on-tmp]]
 === 문제: /tmp에서 "Permission denied" 또는 "Cannot execute binary"
 
 *증상:*
@@ -139,6 +144,7 @@ NOTE: 이 해결 방법을 사용하려면 사용자 지정 경로가 먼저 존
 
 
 
+[[issue-connection-timeout]]
 === 문제: 연결 시간 초과
 
 *증상:*
@@ -157,6 +163,7 @@ Request timeout
 
 
 
+[[issue-insufficient-disk-space]]
 === 문제: 디스크 공간 부족
 
 *증상:*
@@ -196,6 +203,7 @@ rm -rf /tmp/_MEI*
 
 
 
+[[issue-invalid-runs-path]]
 === 문제: 잘못된 실행 경로
 
 *증상:*
@@ -215,6 +223,7 @@ Cannot create tarball: basepath_runs '<path>' does not exist
 
 
 
+[[issue-invalid-target-ontap-version]]
 === 문제: 잘못된 대상 ONTAP 버전
 
 *증상:*
@@ -234,6 +243,7 @@ Downgrade is not supported. Target version must be greater than or equal to the 
 
 
 
+[[issue-signature-verification-fails]]
 === 문제: 서명 확인에 실패합니다
 
 *증상:*
@@ -261,6 +271,7 @@ openssl dgst -sha256 -verify UHC-Linux-public.pub -signature uhc.sig uhc
 
 
 
+[[issue-telemetry-upload-failure]]
 === 문제: 원격 측정 업로드 실패
 
 *증상:*
@@ -283,6 +294,7 @@ Telemetry endpoint is not reachable
 
 
 
+[[issue-update-in-progress-lock-file]]
 === 문제: "UPDATE IN PROGRESS" 잠금 파일
 
 *증상:*

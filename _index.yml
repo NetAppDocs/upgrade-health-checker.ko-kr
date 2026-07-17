@@ -19,8 +19,12 @@ indexpage:
     links:
     - title: ONTAP 업그레이드 보고서를 생성합니다
       url: generate-report-upgrade-health-checker.html
+    - title: 업그레이드 상태 점검 대시보드
+      url: dashboard-upgrade-health-checker.html
     - title: 보고서 생성 자동화
       url: automate-report-upgrade-health-checker.html
+    - title: 이메일로 보고서 받기
+      url: setup-email-upgrade-health-checker.html
   - title: 추가 자료
     links:
     - title: NetApp Lab on Demand를 사용하여 Upgrade Health Checker 시작하기

@@ -191,7 +191,6 @@
   <block id="daad4dadeda8cd86f01c8ad7f2a30465" category="summary">이 문서 사이트의 새로운 소식을 알아보세요.</block>
   <block id="a8324b80938b67ec782deb0221494038" category="doc">Upgrade Health Checker의 새로운 기능</block>
   <block id="984ed907e956f5ada3f813bd4a802fd2" category="inline-link-macro">NetApp Console 자동화 허브</block>
-  <block id="ae47874d4e80f14ff840114a5af1558e" category="paragraph">Upgrade Health Checker는 성공적인 ONTAP 업그레이드를 완료할 수 있도록 포괄적인 온사이트 보고서를 생성하는 새로운 솔루션을 제공합니다. 기존 자동화 및 오케스트레이션 프레임워크와 함께 사용하여 단일 또는 다중 클러스터를 업그레이드할 때 효율성을 향상시킬 수 있습니다. Upgrade Health Checker는 ONTAP 9.11.1 이상으로의 업그레이드를 지원합니다.</block>
   <block id="ba6d627457ce6f12fac3776c3f84b9f5" category="inline-link-macro">Upgrade Health Checker에 대해 자세히 알아보십시오</block>
   <block id="c2da3472d13132f746797e82ab607214" category="paragraph"><block ref="311172ef496e6974c00a808505e30585" category="inline-link-macro-rx"></block>.</block>
   <block id="6e777a6e34571fc72776d25b82dfacec" category="sidebar">Upgrade Health Checker는 포괄적인 상태 점검을 수행하여 성공적인 ONTAP 업그레이드를 계획하고 실행할 수 있도록 지원합니다.</block>
@@ -220,7 +219,6 @@
   <block id="82e19305023b5eb3613e715db77f833c" category="list-text">JSON 보고서 경로:<block ref="fa32c5a3f7d651976fb4d5ab4d04b0b0" prefix=" " category="inline-code"></block></block>
   <block id="c9222608750e8dc2e14567da95cc5574" category="list-text">웹 브라우저, Microsoft Excel 또는 JSON 뷰어에서 보고서 파일(이름은<block ref="781e82a34e84af3b11fccec6b813c654" prefix=" " category="inline-code"></block>)을 열어 보고서를 확인하십시오. 원격 호스트에서 실행하는 경우 먼저 보고서 파일을 웹 브라우저, Excel 또는 JSON 뷰어에서 보고서를 볼 수 있는 컴퓨터로 다운로드하십시오.</block>
   <block id="ef442759af12bb34136648bc4519a80c" category="section-title">2026년 4월 15일</block>
-  <block id="46f2cb9a84a7af28bc6cd48700cc9900" category="paragraph">Upgrade Health Checker 문서의 이번 업데이트에는 다음과 같은 기능이 포함되어 있습니다.</block>
   <block id="e1a2132b8b37788de7f02a2417b9fb84" category="paragraph"><block ref="818545cfdb8752d4fd7459b5cbb30ef7" category="inline-link-macro-rx"></block>.</block>
   <block id="b729a38666412b046926504f8c6e0c22" category="list-text">UHC는 이제 HTML(사람이 읽을 수 있음) 및 JSON(기계가 읽을 수 있음) 형식을 보완하는 새로운 보고서 형식(.XLSX - 사람이 편집 가능)을 제공합니다.</block>
   <block id="28644c8986780297cc12f67e6e53c6e9" category="paragraph"><block ref="6489edbb98d22789fa797cea6950f9bd" category="inline-link-macro-rx"></block>.</block>
@@ -228,7 +226,6 @@
   <block id="14bcc4201c40840cb4def541b49a3f32" category="sidebar">NetApp Lab on Demand를 사용하여 Upgrade Health Checker 시작하기</block>
   <block id="9878135fc061d82ca23d024a73b70f17" category="list-text">HTTPS를 통한 원격 측정 엔드포인트(+https://support.netapp.com/+ 및 +https://api.activeiq.netapp.com+) 연결</block>
   <block id="8e902ec9dc6816d99e16bdee4a2eed46" category="list-text">HTTPS(443)를 통한 자동 업데이트 엔드포인트(+https://api.uhc.netapp.com+, +https://gql.aiq.netapp.com+, +https://api.activeiq.netapp.com+)에 대한 연결</block>
-  <block id="7da7d55bf35c61004edeb6d3b68a9970" category="list-text">UHC가 자동 업데이트 기능을 작동시키려면 새로운 엔드포인트(+https://api.activeiq.netapp.com+)에 대한 액세스 권한이 필요합니다.</block>
   <block id="fb87b83f5a1f10d68c8aae574e593e92" category="list-text">cron 일정에 대한 자동화 스크립트를 생성하여 Upgrade Health Checker를 실행합니다. 다음은 여러 클러스터에 대해 Upgrade Health Checker를 실행하는 예제 스크립트입니다. 바이너리 및 config.yaml 파일이 /opt/uhc/tool/에 설치되었습니다.</block>
   <block id="896d9c07e1c3a1231ece824cc9567062" category="list-text">월요일부터 금요일까지 오전 4시에 스크립트를 실행하도록 cron 작업을 설정합니다.</block>
   <block id="ace9e20908f5ac61a1cd07a6d3d60c0f" category="admonition">지속적인 상태 모니터링을 위해서는 특정 업그레이드 대상을 지정하지 않고 <block ref="bfb43d575663966ac38a26eb4b47410c" prefix=" " category="inline-code"></block>를 사용하십시오.</block>
@@ -296,20 +293,15 @@
   <block id="075d48f32d1c61c7bc401a6884f7cf92" category="list-text"><block ref="075d48f32d1c61c7bc401a6884f7cf92" category="inline-link-macro-rx"></block></block>
   <block id="2bc7aac0df718ec4b8d51eacce3de379" category="summary">Upgrade Health Checker 보고서를 수신하도록 이메일을 설정할 수 있습니다.</block>
   <block id="403a25a6039c0e1bf716eb5582433b74" category="doc">이메일로 업그레이드 상태 점검 보고서 받기</block>
-  <block id="860efc9b661f4d41df0b3275d4a01f9e" category="paragraph">Upgrade Health Checker에 이메일을 통합하여 받은 편지함으로 보고서를 수신할 수 있습니다. config.yaml 파일 또는 명령줄 인수를 통해 이 기능을 활성화합니다. 활성화되면 Upgrade Health Checker는 생성된 보고서(HTML, Excel 또는 JSON)를 SMTP 서버를 사용하여 구성된 하나 이상의 수신자에게 전송합니다. 이 기능이 비활성화되면 보고서가 전송되지 않습니다. 보고서 생성이 실패하고 이메일이 활성화된 경우 로그 파일이 구성된 수신자에게 전송됩니다.</block>
   <block id="e152f7a0987cd387b3f0af29e5da3550" category="section-title">config.yaml 파일을 사용하여 구성합니다</block>
   <block id="7b717dfd9ad1ff92fe9062d96808c202" category="list-text">config.yaml 파일에서 이메일 보고서를 활성화합니다.</block>
-  <block id="a5506b391e227dfd4ee5fcf46a44f411" category="list-text">발신자 세부 정보 및 제목과 함께 SMTP 구성 설정을 제공합니다.</block>
-  <block id="dc0335c87191d92d81fca87bdb3e9a6d" category="list-text">수신자 이메일 주소를 제공하고 이메일로 전송할 보고서 형식(예: HTML, EXCEL, JSON, ALL)을 구성하십시오.</block>
   <block id="becf91e5465bdb37d46d763d4aab426c" category="section-title">명령줄 인수를 사용하여 구성합니다</block>
   <block id="479f67ea57ff0730833a90e8cb344675" category="list-text">명령줄 인수를 사용하여 이메일 보고서를 활성화합니다.</block>
   <block id="86687a26ed58885822822c492bb525c6" category="list-text">수신자 이메일 주소를 제공하세요:</block>
   <block id="50473cade6ce5b072ef594d97e30f293" category="list-text">이메일로 전송할 보고서 형식(예: HTML, EXCEL, JSON)을 구성하십시오.</block>
-  <block id="6cde847387b92f199ce8915b3692ac37" category="paragraph">다음 세 가지 속성은 명령줄 인수와 config.yaml 파일을 모두 사용하여 구성할 수 있으며, 나머지 속성은 config.yaml 파일에서만 구성할 수 있습니다.</block>
   <block id="02d162bc011d2df35f8cd6f906d7d60a" category="list-text">이메일 활성화됨</block>
   <block id="f46e85a0de52240f550f9daab9d6086c" category="list-text">이메일 수신자</block>
   <block id="ea263adf46b6d5e874d790afd83f0987" category="list-text">이메일 보고서 형식</block>
-  <block id="2b6bf35359882281e9a439e9cfcdfd7a" category="paragraph">명령줄 인수가 제공되는 경우, 해당 인수가 config.yaml 파일의 값을 재정의한다는 점에 유의하십시오.</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">예를 들면 다음과 같습니다.</block>
   <block id="1cc4274eac4a90919037379ad302ee24" category="summary">업그레이드 상태 점검 문제 해결: ONTAP 업그레이드 시 발생하는 일반적인 문제, 오류 및 해결 방법.</block>
   <block id="33fc1d20f1d2e7e8d9ea39cc1c1e260b" category="doc">업그레이드 상태 점검 도구 문제 해결</block>
@@ -379,7 +371,6 @@
   <block id="e06741797ed1dc0a966f53071a491401" category="inline-link-macro">대시보드 파라미터</block>
   <block id="2db3ba2e9c7b7806153c255359ca61d2" category="paragraph"><block ref="cb5987a19cc29bdff093adf9e3c49ecc" category="inline-link-macro-rx"></block>, <block ref="742c6b812eaf7871aa5cdafc51efea43" category="inline-link-macro-rx"></block>.</block>
   <block id="b8625ecfb276c9ebf1ede5fca0088ca8" category="list-text">새로운 유지 관리, 문제 해결 및 FAQ 섹션을 소개합니다.</block>
-  <block id="1ab8a927937778a6689a579c30b0ccaa" category="list-text">Upgrade Health Checker를 유지 관리하려면 정기적으로 업데이트를 확인하고, 로그를 모니터링하여 반복되는 문제가 있는지 확인하고, 도구가 사용 환경에 맞게 올바르게 구성되었는지 확인하십시오.</block>
   <block id="dee801512c32b9a598a47b86ba488f76" category="paragraph"><block ref="4e186b263c1e6fa5ae08ef69bdaf2995" category="inline-link-macro-rx"></block>.</block>
   <block id="f12f1c86955a028fd35ab9eaff2150a3" category="list-text">일반적인 업그레이드 상태 점검 문제를 해결하고 ONTAP 업그레이드 계획을 차단할 수 있는 오류를 해결하십시오.</block>
   <block id="baa81debda1c4b19727722cd64a108d4" category="paragraph"><block ref="3597fe8c8063c1708eb12f618dae69b7" category="inline-link-macro-rx"></block>.</block>
@@ -388,4 +379,24 @@
   <block id="0ff45cc75d0cd4d181c04f8f358944c3" category="sidebar">유지 관리, 문제 해결, FAQ</block>
   <block id="ade01a5a398372194a42c36e9f5279ac" category="sidebar">유지 관리</block>
   <block id="d60c463bb4096f3ed4bd1618626dfe10" category="sidebar">문제 해결</block>
+  <block id="b8587c4f26b562a2289d2c3ebc1490cd" category="paragraph">Upgrade Health Checker는 보고서를 받은 편지함으로 직접 이메일로 전송할 수 있습니다. 이 기능은 config.yaml 파일 또는 명령줄 인수를 통해 활성화할 수 있습니다. 활성화하면 Upgrade Health Checker는 생성된 보고서(HTML, Excel 또는 JSON 형식)를 SMTP 서버를 통해 하나 이상의 수신자에게 전송합니다. 비활성화하면 보고서가 전송되지 않습니다. 보고서 생성에 실패하고 이메일 전송이 활성화된 경우, Upgrade Health Checker는 로그 파일을 구성된 수신자에게 이메일로 전송합니다.</block>
+  <block id="8e02ede1d03aac90f92cc176cace3e9c" category="paragraph">config.yaml 파일에서 이메일 보고서를 활성화하고, SMTP 서버 세부 정보를 추가하고, 수신자 주소와 보고서 형식을 지정하여 이메일 설정을 구성할 수 있습니다.</block>
+  <block id="c27f5ad22c5694f3bdac1429bc3dbc35" category="list-text">SMTP 구성 설정, 발신자 정보 및 제목을 추가합니다.</block>
+  <block id="3580e74e397e00dc281bbd9214fb9056" category="list-text">수신자 이메일 주소를 추가하고 시스템에서 이메일로 전송할 보고서 형식(예: HTML, EXCEL, JSON 또는 ALL)을 설정하세요. 인증 및 암호화를 사용할 수도 있습니다.</block>
+  <block id="2a91e94a72840e7924d016578fbad286" category="paragraph">명령줄 인수를 사용하여 보고서 활성화, 수신자 지정 및 보고서 형식 선택과 같은 기본 이메일 설정을 구성할 수 있습니다.</block>
+  <block id="5a218b91f6158f83ff408c235c22608f" category="paragraph">다음 세 가지 속성은 명령줄 인수 또는 config.yaml 파일을 사용하여 구성할 수 있습니다. 나머지 모든 속성은 config.yaml 파일에서만 구성할 수 있습니다.</block>
+  <block id="3765a0a9e71fcf0695d585798c0f7818" category="paragraph">명령줄 인수는 config.yaml 파일의 값을 재정의한다는 점에 유의하십시오.</block>
+  <block id="a6be72313a95cd7c51d73821a3ec4a39" category="section-title">2026년 7월 17일</block>
+  <block id="a1b9ebd6f0a705373bb04a1ef3e3e5a1" category="paragraph">이번 업데이트에는 플릿 위험 보기 대시보드, 이메일 인증 및 암호화 지원, 드라이브 개수 보고, 권장 ONTAP 버전 지원, NAS 및 SAN IMT 검사 등 여러 가지 개선 사항이 추가되었습니다.</block>
+  <block id="eb794a02fa8d9355140be4e8462e5f4f" category="list-text">UHC 대시보드: *Fleet Risk* 보기 기능이 이제 제공됩니다.</block>
+  <block id="69161900749195d35aba8ae3dd1b86e9" category="list-text">이메일 통합: 인증 및 암호화를 지원하는 이메일 서버 지원</block>
+  <block id="765efeade5c6287182e507f2e42e0c17" category="list-text">보고서의 클러스터 요약에 *드라이브 개수*를 추가했습니다.</block>
+  <block id="b3c16c4644ccd43c0fa7a23462d7f33c" category="list-text">이제 권장 ONTAP 버전이 지원됩니다</block>
+  <block id="3d845cec7f7e3420d8ce5c903cf124e5" category="list-text">NAS 및 SAN IMT 검사 지원이 추가되었습니다.</block>
+  <block id="8aab03955bf2c1214a6ad2ee0f63546a" category="paragraph">이번 업데이트에는 보고서 이메일 전송 기능, 빠른 상태 개요를 위한 대시보드 매개변수, 그리고 Upgrade Health Checker 유지 관리 및 문제 해결에 도움이 되는 새로운 문서 섹션이 추가되었습니다.</block>
+  <block id="7d9c60c63b935ef67858fee9c59b31ce" category="list-text">업그레이드 상태 점검 도구를 유지 관리하려면 업데이트를 확인하고, 로그를 모니터링하여 반복되는 문제를 파악하고, 도구가 올바르게 구성되었는지 확인하십시오.</block>
+  <block id="f59b071ecb8fe980b0730a8d2ba9bd0c" category="paragraph">이번 업데이트에는 새로운 XLSX 보고서 형식이 추가되었으며, 자동 업데이트 기능을 사용하려면 새로운 엔드포인트에 대한 접근 권한이 필요합니다.</block>
+  <block id="8a4e5ac1aa6e6074a0de130e95d9919d" category="list-text">자동 업데이트 기능이 작동하려면 UHC에 새 엔드포인트(+https://api.activeiq.netapp.com+)에 대한 액세스 권한을 부여해야 합니다.</block>
+  <block id="a272a47b723d2038be71ba15d270606e" category="paragraph">업그레이드 상태 점검 도구가 출시되었습니다. 이 도구는 상세한 현장 보고서를 생성하여 ONTAP 업그레이드를 성공적으로 완료할 수 있도록 지원합니다. 업그레이드 상태 점검 도구를 기존 자동화 및 오케스트레이션 프레임워크와 함께 사용하면 단일 또는 여러 클러스터 업그레이드 시간을 단축할 수 있습니다. 업그레이드 상태 점검 도구는 ONTAP 9.11.1 이상 버전으로의 업그레이드를 지원합니다.</block>
+  <block id="742eb09495234f505b1ad9d7813d30e7" category="sidebar">이메일로 보고서 받기</block>
 </blocks>
