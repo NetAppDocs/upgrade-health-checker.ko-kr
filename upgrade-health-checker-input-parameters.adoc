@@ -4,7 +4,7 @@ permalink: upgrade-health-checker-input-parameters.html
 keywords: upgrade, health, checker, input, parameter 
 summary: ONTAP 클러스터에 대한 업그레이드 보고서 생성을 지원하기 위해 Upgrade Health Checker의 입력 매개변수에 대해 자세히 알아볼 수 있습니다. 
 ---
-= Upgrade Health Checker의 입력 매개변수에 대해 알아보십시오
+= 업그레이드 상태 검사기의 입력 매개변수
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

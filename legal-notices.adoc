@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= 법적 고지
+= Upgrade Health Checker 관련 법적 고지
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
