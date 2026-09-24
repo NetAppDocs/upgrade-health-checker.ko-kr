@@ -282,10 +282,8 @@
   <block id="176c0fe1d322d9a51e31204aad32eae6" category="paragraph">*ONTAP 버전*</block>
   <block id="92545160fc537c4d5544686c4bcdf2e5" category="cell">ONTAP 9.11.1 이상을 실행하는 클러스터</block>
   <block id="71158affd0036fb2466b1fb9e9ae37b4" category="paragraph">*호스팅 요구 사항*</block>
-  <block id="fffb00fef85cf67efb62289a6532ecf2" category="cell">자동 도구 업데이트를 위해 VM을 클러스터 연결 및 인터넷 액세스가 가능한 위치에 배치하십시오. 자동 업데이트를 수행하고 NetApp이 업그레이드 계획에 대한 AutoSupport 정보를 수신할 수 있도록 VM은 HTTPS(443)를 통해 다음 엔드포인트에 액세스할 수 있어야 합니다.<block ref="b6fcb4b13f321b8cb388d57eb2e860ab" category="inline-link-rx"></block> <block ref="072b499eacb5befcbdab2d6cc0fe02a0" category="inline-link-rx"></block> <block ref="53fb0fc7c544c164b74ed43fbccd4384" category="inline-link-rx"></block> <block ref="1e149c7d9ce6dc9e42acefe98045ece8" category="inline-link-rx"></block></block>
   <block id="6416dbbf5267211166cfea2ed336e59e" category="paragraph">*권장 패키지*</block>
   <block id="38f5250c3529fb3f11c0374bdaf9aeaa" category="cell">액세스를 용이하게 하기 위해 웹 서버를 설치하십시오</block>
-  <block id="6063847442b88d203c59c2c6de6f2e53" category="admonition">가상 머신이 HTTPS(443)를 통해 자동 업데이트 및 원격 측정 엔드포인트(<block ref="dff1129755a63688cdc5de28dfe608ad" category="inline-link-rx"></block> 및 <block ref="b6e65db6bdd125b2fca849ddf715a294" category="inline-link-rx"></block>)에 연결할 수 있는지 확인하여 NetApp이 업그레이드 계획에 대한 AutoSupport 정보를 수신할 수 있도록 하십시오. 인터넷에 액세스할 수 없는 경우 업그레이드 상태 검사기의 최신 버전을 수동으로 다운로드해야 합니다.</block>
   <block id="fd2112d1826143e744670603b8189778" category="list-text"><block ref="40053797cfb8864b5eaa5f1f6f7991c2" category="inline-link-macro-rx"></block>로 이동하여 Upgrade Health Checker 타일을 찾아 Upgrade Health Checker 바이너리를 다운로드하십시오.</block>
   <block id="0028a1b2c66adc5ceda52b78a1cdb74d" category="paragraph">HTTP 애플리케이션용 서비스 계정을 생성해야 합니다. 다음 CLI 명령을 사용하여 필요한 권한을 구성하십시오:</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="list-title">관련 정보</block>
@@ -402,4 +400,6 @@
   <block id="03276a80a231fea1196fc4e6e3ab6682" category="paragraph">이번 업데이트는 SAN 및 NAS ONTAP 클러스터의 상호 운용성 검사를 강화하고 기존 문제를 일부 수정합니다.</block>
   <block id="13fcda6342963d7d59aa8e893c2fe5c0" category="doc">Upgrade Health Checker를 사용하여 업그레이드 계획 생성</block>
   <block id="d37632fbc2f0f1b27ade5808d2dec434" category="doc">Upgrade Health Checker 관련 법적 고지</block>
+  <block id="58ce19f9d14bbf36c99916598d07b7c7" category="cell">자동 툴 업데이트를 위해 VM을 클러스터 연결 및 인터넷 액세스가 가능한 위치에 배치하십시오. 자동 업데이트를 수행하고 NetApp이 업그레이드 계획에 대한 AutoSupport 정보를 수신할 수 있도록 VM은 HTTPS(443)를 통해 다음 엔드포인트에 액세스할 수 있어야 합니다: \https://support.netapp.com/ \https://api.uhc.netapp.com \https://gql.aiq.netapp.com \https://api.activeiq.netapp.com</block>
+  <block id="f8dfac59d1fb625ac9d81d11aafbcd07" category="admonition">가상 머신이 HTTPS(443)를 통해 자동 업데이트 및 원격 측정 엔드포인트(\https://support.netapp.com/ 및 \https://api.activeiq.netapp.com)에 연결할 수 있는지 확인하여 NetApp이 업그레이드 계획에 대한 AutoSupport 정보를 수신할 수 있도록 하십시오. 인터넷에 액세스할 수 없는 경우 업그레이드 상태 검사기의 최신 버전을 수동으로 다운로드해야 합니다.</block>
 </blocks>
