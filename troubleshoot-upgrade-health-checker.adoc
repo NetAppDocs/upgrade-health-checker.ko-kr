@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: troubleshoot-upgrade-health-checker.html 
 keywords: upgrade, health, checker, troubleshoot, issues, errors, ontap 
-summary: '업그레이드 상태 점검 문제 해결: ONTAP 업그레이드 시 발생하는 일반적인 문제, 오류 및 해결 방법.' 
+summary: ONTAP 업그레이드에 대한 일반적인 문제, 오류 및 해결 방법을 검토하여 Upgrade Health Checker의 문제를 해결하십시오. 
 ---
 = 업그레이드 상태 점검 도구 문제 해결
 :hardbreaks:
