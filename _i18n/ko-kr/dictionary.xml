@@ -406,6 +406,10 @@
   <block id="273251dcc234403d19bf0e1b8a9c54c2" category="paragraph">이번 업데이트에서는 대상 버전 위험 평가, 보고서 세부 정보, 권장 ONTAP 버전 선택 및 펌웨어 권장 사항에 대한 몇 가지 개선 사항이 추가되었습니다.</block>
   <block id="e8f602fbb5275e969de02c4ff90239cc" category="list-text">UHC 평가에서는 이제 대상 버전에 대한 ONTAP 위험을 평가합니다.</block>
   <block id="3c352be1f1f9a774d8de0a66650f2a00" category="list-text">이제 보고서에는 CVE ID, CVSS 점수 및 권장 수정 버전이 포함됩니다.</block>
-  <block id="fe6994d091ee557d1bc609b9f347f0e5" category="list-text">UHC는 이제 <block ref="1bd361f49e949b9f207ae59725d3ed48" prefix=" " category="inline-code"></block> 매개변수를 사용하거나 <block ref="259fe82e12a866f01123927480c7851b" prefix=" " category="inline-code"></block> 파일에서 ONTAP 버전을 자동으로 선택하는 기능을 지원합니다.</block>
   <block id="5ffdabc76a252a34c19dc9bbdcd1ff5b" category="list-text">이제 보고서에 권장 펌웨어 버전이 포함됩니다.</block>
+  <block id="6b3529a2a10bfee089b3f638467b7e2b" category="section-title">2026년 10월 28일</block>
+  <block id="325e52854858e04755ae213c8d115dea" category="paragraph">이번 업데이트에서는 최신 ONTAP 패치 릴리스 버전을 자동으로 선택하는 기능이 추가되었으며, 보고서에 지원되는 ONTAP HotFix 업그레이드 버전 목록이 표시됩니다.</block>
+  <block id="428497b30d56e595e7b8a586873571fc" category="list-text"><block ref="e32d3e545f4ee67e40af7936e4051a3e" prefix=" " category="inline-code"></block>를 사용하거나 <block ref="259fe82e12a866f01123927480c7851b" prefix=" " category="inline-code"></block> 파일을 사용하여 최신 ONTAP 패치 릴리스 버전을 자동으로 선택하는 기능을 제공합니다.</block>
+  <block id="56d532fa14adf0150f0553c398ba85a1" category="list-text">지원되는 ONTAP HotFix 업그레이드 버전이 이제 보고서에 표시됩니다.</block>
+  <block id="b8c3d27a6b7a61bca4f7cf2ed9d3bdcd" category="list-text">UHC는 이제 <block ref="1bd361f49e949b9f207ae59725d3ed48" prefix=" " category="inline-code"></block> 매개변수를 사용하거나 <block ref="259fe82e12a866f01123927480c7851b" prefix=" " category="inline-code"></block> 파일에서 권장 ONTAP 버전을 자동으로 선택하는 기능을 지원합니다.</block>
 </blocks>
